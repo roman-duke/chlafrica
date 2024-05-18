@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/** Custom style for wavy lines **/
+.tribe-pattern {
+  --mask:
+    radial-gradient(18.01px at 50% calc(100% + 12.5px),#0000 calc(99% - 4px),#000 calc(101% - 4px) 99%,#0000 101%) calc(50% - 20px) calc(50% - 7px + .5px)/40px 14px repeat-x,
+    radial-gradient(18.01px at 50% -12.5px,#0000 calc(99% - 4px),#000 calc(101% - 4px) 99%,#0000 101%) 50% calc(50% + 7px)/40px 14px repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+
+/** Custom style for wavy demarcation **/
+.section-demarcation {
+  --mask:
+    radial-gradient(187.37px at 50% 256.5px,#000 99%,#0000 101%) calc(50% - 190px) 0/380px 100%,
+    radial-gradient(187.37px at 50% -161.5px,#0000 99%,#000 101%) 50% 95px/380px 100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
