@@ -17,7 +17,7 @@ export default {
           DEFAULT: "#F3BA2A",
           earth_yellow: "#DCA957",
           accent: "#302D8C",
-          // accent_two: "#281473"
+          accent_two: "#F3F2F8"
         },
         custom: {
           'white': "#fff",

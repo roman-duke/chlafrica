@@ -8,25 +8,25 @@ export default function Partners() {
         forward!
       </span>
 
-      <div className="flex w-full h-24 my-4">
-        <div className="hover:scale-110 transition">
-          <img className="w-44 h-24 object-contain" src="/src/assets/images/adekunle_partner_logo.png" />
+      <div className="flex w-full h-24 my-4 py-16 justify-center items-center rounded-md shadow-md border">
+        <div className="w-44 h-24 overflow-hidden">
+          <img className="hover:scale-110 w-full h-full transition object-contain" src="/src/assets/images/adekunle_partner_logo.png" />
         </div>
 
-        <div className="hover:scale-110 transition">
-          <img className="w-44 h-24 object-contain" src="/src/assets/images/africa_communications_logo.png" />
+        <div className="w-44 h-24 overflow-hidden">
+          <img className="hover:scale-110 w-full h-full transition object-contain" src="/src/assets/images/africa_communications_logo.png" />
         </div>
 
-        <div className="hover:scale-110 transition">
-          <img className="w-44 h-24 object-contain" src="/src/assets/images/ayde_limited_partner_logo.png" />
+        <div className="w-44 h-24 overflow-hidden">
+          <img className="hover:scale-110 w-full h-full transition object-contain" src="/src/assets/images/ayde_limited_partner_logo.png" />
         </div>
         
-        <div className="hover:scale-110 transition">
-          <img className="w-44 h-24 object-contain" src="/src/assets/images/ayde_media_logo.png" />
+        <div className="w-44 h-24 overflow-hidden">
+          <img className="hover:scale-110 w-full h-full transition object-contain" src="/src/assets/images/ayde_media_logo.png" />
         </div>
 
-        <div className="hover:scale-110 transition">
-          <img className="w-44 h-24 object-contain" src="/src/assets/images/kavod_partner_logo.png" />
+        <div className="w-44 h-24 overflow-hidden">
+          <img className="hover:scale-110 w-full h-full transition object-contain" src="/src/assets/images/kavod_partner_logo.png" />
         </div>
         {/* <img className="w-44 h-24 object-contain" src="/src/assets/images/poiema_partner_logo.png" /> */}
       </div>

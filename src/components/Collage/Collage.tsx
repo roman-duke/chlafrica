@@ -1,6 +1,6 @@
 export default function Collage() {
   return (
-    <div className="relative">
+    <div className="relative ml-10">
       <div className="absolute -left-1/3 -translate-x-full -top-1/2 bg-dotted-pattern w-24 h-14 bg-contain " />
       {/* <div className="w-10 h-10"></div> */}
 
