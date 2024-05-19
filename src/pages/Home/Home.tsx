@@ -4,6 +4,7 @@ import Services from "@components/Services/Services"
 import SectionDemarcation from "@components/SectionDemarcation/SectionDemarcation"
 import Collage from "@components/Collage/Collage"
 import Stats from "@components/Stats/Stats"
+import Partners from "@components/Partners/Partners"
 
 export default function Home() {
   return (
@@ -24,11 +25,13 @@ export default function Home() {
         <Services />
       </section>
 
-      <section className="bg-custom-light-gray py-12 pr-32 pl-48">
-        <div className="flex items-center justify-around">
+      <section className="max-w-[1140px] m-auto bg-custom-light-gray px-32">
+        <div className="flex items-center justify-between">
           <Collage />
           <Stats />
         </div>
+
+        <Partners />
       </section>
     </div>
   )
