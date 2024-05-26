@@ -1,3 +1,6 @@
+import ExpressionImg1 from "@assets/images/expression_card_1.jpeg"
+import ExpressionImg2 from "@assets/images/expression_card_2.jpeg"
+import ExpressionImg3 from "@assets/images/chlafrica_space_center.webp"
 import ExpressionCard from "@components/ExpressionCard/ExpressionCard";
 
 export default function Expressions() {
@@ -13,7 +16,7 @@ export default function Expressions() {
           content="The Adoption of the African Union Agenda 2063 has 
                   been a tremendous step towards transforming Africa 
                   into a prosperous, integrated and peaceful continent..."
-          imgSource="/src/assets/images/expression_card_1.jpeg"
+          imgSource={ExpressionImg1}
         />      
 
         <ExpressionCard 
@@ -22,7 +25,7 @@ export default function Expressions() {
           content="Are you a young African eager to connect with peers and 
                   explore exciting new opportunities? Or maybe you're a 
                   professional seeking to support…"
-          imgSource="/src/assets/images/expression_card_2.jpeg"
+          imgSource={ExpressionImg2}
         />      
 
         <ExpressionCard 
@@ -31,7 +34,7 @@ export default function Expressions() {
           content="The nascent space industry in Africa is gradually becoming
                   a significant tool for promoting Africa’s growth and development. 
                   Its economic and environmental sectors…"
-          imgSource="/src/assets/images/chlafrica_space_center.webp"
+          imgSource={ExpressionImg3}
         />      
       </div>
     </div>

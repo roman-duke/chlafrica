@@ -1,3 +1,9 @@
+import AdekunlePartner from "@assets/images/adekunle_partner_logo.png";
+import AfricaCommunications from "@assets/images/africa_communications_logo.png";
+import AydeLimited from "@assets/images/ayde_limited_partner_logo.png";
+import AydeMedia from "@assets/images/ayde_media_logo.png";
+import KavodPartner from "@assets/images/kavod_partner_logo.png";
+
 export default function Partners() {
   return (
     <div className="mt-6 lg:mt-12 flex flex-col items-center">
@@ -10,23 +16,23 @@ export default function Partners() {
 
       <div className="flex lg:w-full px-4 h-16 lg:h-24 mt-4 mb-8 lg:my-4 lg:py-16 justify-center items-center rounded-md shadow-md border">
         <div className="lg:w-44 lg:h-24 w-14 h-14 overflow-hidden">
-          <img className="hover:scale-110 w-full h-full transition object-contain" src="/src/assets/images/adekunle_partner_logo.png" />
+          <img className="hover:scale-110 w-full h-full transition object-contain" src={AdekunlePartner} />
         </div>
 
         <div className="lg:w-44 lg:h-24 w-14 h-14 overflow-hidden">
-          <img className="hover:scale-110 w-full h-full transition object-contain" src="/src/assets/images/africa_communications_logo.png" />
+          <img className="hover:scale-110 w-full h-full transition object-contain" src={AfricaCommunications} />
         </div>
 
         <div className="lg:w-44 lg:h-24 w-14 h-14 overflow-hidden">
-          <img className="hover:scale-110 w-full h-full transition object-contain" src="/src/assets/images/ayde_limited_partner_logo.png" />
+          <img className="hover:scale-110 w-full h-full transition object-contain" src={AydeLimited} />
         </div>
         
         <div className="lg:w-44 lg:h-24 w-14 h-14 overflow-hidden">
-          <img className="hover:scale-110 w-full h-full transition object-contain" src="/src/assets/images/ayde_media_logo.png" />
+          <img className="hover:scale-110 w-full h-full transition object-contain" src={AydeMedia} />
         </div>
 
         <div className="lg:w-44 lg:h-24 w-14 h-14 overflow-hidden">
-          <img className="hover:scale-110 w-full h-full transition object-contain" src="/src/assets/images/kavod_partner_logo.png" />
+          <img className="hover:scale-110 w-full h-full transition object-contain" src={KavodPartner} />
         </div>
         {/* <img className="w-44 h-24 object-contain" src="/src/assets/images/poiema_partner_logo.png" /> */}
       </div>

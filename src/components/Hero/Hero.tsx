@@ -1,3 +1,4 @@
+import AfricanWoman from "@assets/images/african_woman.webp";
 import Button from "@components/Button/Button"
 
 export default function Hero() {
@@ -22,7 +23,7 @@ export default function Hero() {
 
       <div className="relative z-10 flex justify-center shadow-2xl">
         {/* <img className="w-80 h-80" src="/src/assets/images/africa_human_development.jpeg" /> */}
-        <img className="w-80 h-80 rounded-lg" src="/src/assets/images/african_woman.webp" />
+        <img className="w-80 h-80 rounded-lg" src={AfricanWoman} />
       </div>
 
       <div className="px-9 lg:px-0">

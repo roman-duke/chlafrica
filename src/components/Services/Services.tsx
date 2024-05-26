@@ -1,3 +1,7 @@
+import ChlafricaIncubation from "@assets/images/chlafrica_incubation.png";
+import ChlafricaSustainability from "@assets/images/chlafrica_sustainability.png";
+import ChlafricaShakingHands from "@assets/images/chlafrica_shaking_hands.png";
+import CommunitySupport from "@assets/images/chlafrica_support.png";
 import ServiceCard from "@components/ServiceCard/ServiceCard";
 
 export default function Services() {
@@ -18,7 +22,7 @@ export default function Services() {
           content="We specialise in co-designing and launching 
                   social businesses and initiatives, providing 
                   comprehensive support from concept to execution"
-          imgSource="/src/assets/images/chlafrica_incubation.png"
+          imgSource={ChlafricaIncubation}
         />
 
         <ServiceCard
@@ -28,7 +32,7 @@ export default function Services() {
                   finance, legal advisory, and more. Our network includes 
                   excellent consultants and partner organisations to ensure 
                   seamless operations."
-          imgSource="/src/assets/images/chlafrica_sustainability.png"
+          imgSource={ChlafricaSustainability}
         />
 
         <ServiceCard
@@ -36,7 +40,7 @@ export default function Services() {
           content="Our expertise extends to brand consulting and impact consulting, 
                   including Corporate Social Responsibility (CSR), Corporate Social 
                   Advocacy (CSA), and Corporate Social Justice (CSJ) initiatives"
-          imgSource="/src/assets/images/chlafrica_shaking_hands.png"
+          imgSource={ChlafricaShakingHands}
         />
 
         <ServiceCard
@@ -44,7 +48,7 @@ export default function Services() {
           content="Our Afrochamps community serves as a think-tank and problem-solving
                   hive for knowledge sharing, capacity building, resource distribution 
                   to promote people-driven development in Africa."
-          imgSource="/src/assets/images/chlafrica_support.png"
+          imgSource={CommunitySupport}
         />
       </div>
     </div>

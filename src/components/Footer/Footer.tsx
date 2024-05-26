@@ -1,3 +1,4 @@
+import ChlafricaLogoText from "@assets/images/chlafrica_logo_text.png"
 import RightArrowIcon from "@assets/icons/right-arrow.svg?react"
 import LocationPinIcon from "@assets/icons/location-pin.svg?react"
 import EmailIcon from "@assets/icons/email.svg?react"
@@ -11,7 +12,7 @@ export default function Footer() {
     <>
       <div className="grid grid-cols-2 lg:grid-cols-4 items-center justify-around gap-5 pt-2 pb-10 lg:py-10">
         <div className="col-span-2 lg:col-span-1 flex flex-col items-center">
-          <img className="w-40 h-24 object-contain" src="/src/assets/images/chlafrica_logo_text.png"/>
+          <img className="w-40 h-24 object-contain" src={ChlafricaLogoText} />
           <p className="mb-4 text-sm text-slate-500 text-center lg:text-left">
             We are promoting people-driven<br/>
             development in Africa by supporting<br/> 

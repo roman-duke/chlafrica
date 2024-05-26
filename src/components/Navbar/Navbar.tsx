@@ -3,6 +3,7 @@ import InstagramIcon from "@assets/icons/instagram.svg?react";
 import TwitterIcon from "@assets/icons/twitter.svg?react";
 import YouTubeIcon from "@assets/icons/youtube.svg?react";
 import MobileNavbar from "./MobileNavbar";
+import ChlafricaLogo from "@assets/images/chlafrica_logo.png";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -13,7 +14,7 @@ export default function Navbar() {
     <header className="border-b border-[#FFFFFF25]">
       <nav className="relative flex justify-between items-center py-2 px-5">
         <div className="basis-1/3">
-          <img className="w-14 h-14 lg:w-20 lg:h-20" src="/src/assets/images/chlafrica_logo.png" alt="Chlafrica Logo"/>
+          <img className="w-14 h-14 lg:w-20 lg:h-20" src={ChlafricaLogo} alt="Chlafrica Logo"/>
         </div>
 
         <ul className="hidden lg:flex gap-3 lg:gap-12 justify-center items-center basis-1/3">  
