@@ -107,6 +107,7 @@ export default function SectionDemarcation({ type } : SectionDemarcationProps) {
     // console.log("Inside the useEffect hook!");
     
     return () => animation.stop();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathIndex]);
   
   // console.log(pathIndex);
