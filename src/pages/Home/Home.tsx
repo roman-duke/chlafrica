@@ -43,7 +43,7 @@ export default function Home() {
       </section>
 
       <footer className="relative">
-        <div className="relative h-[100px]">
+        <div className="relative h-[96px] lg:h-[260px] overflow-hidden">
           <SectionDemarcation type="mini" />
         </div>
 

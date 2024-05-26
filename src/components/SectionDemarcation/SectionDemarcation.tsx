@@ -7,78 +7,26 @@ import {
   layer_one_path_II,
   layer_two_path_II,
   layer_three_path_II,
-  layer_four_path_II
+  layer_four_path_II,
+
+  bottom_layer_one_path,
+  bottom_layer_one_path_II,
+  bottom_layer_two_path,
+  bottom_layer_two_path_II
 } from "./paths"
-// import SectionDemarcationIcon from "@assets/icons/layered-waves.svg?react"
-// import MiniSectionDemarcationIcon from "@assets/icons/mini-layered-waves.svg?react"
 import { animate, motion, useMotionValue } from "framer-motion"
 import { useFlubber } from "./useFlubber";
-// import { useFlubber } from "@hooks/useFlubber";
 
 interface SectionDemarcationProps {
   type?: "mini",
 }
 
-// const path_layer_one_variants = {
-//   initial: {
-//     d: layer_one_path
-//   },
-//   final: {
-//     d: layer_one_path_II,
-//     transition: {
-//       ease: "easeInOut",
-//       duration: 1,
-//       repeat: Infinity,
-//       repeatType: "reverse"
-//     }
-//   },
-// }
-
-// const path_layer_two_variants = {
-//   initial: {
-//     d: layer_two_path
-//   },
-//   final: {
-//     d: layer_two_path_II,
-//     transition: {
-//       ease: "easeInOut",
-//       duration: 1,
-//       repeat: Infinity,
-//     }
-//   }
-// }
-
-// const path_layer_three_variants = {
-//   initial: {
-//     d: layer_three_path
-//   },
-//   final: {
-//     d: layer_three_path_II,
-//     transition: {
-//       ease: "easeInOut",
-//       duration: 1,
-//       repeat: Infinity,
-//     }
-//   }
-// }
-
-// const path_layer_four_variants = {
-//   initial: {
-//     d: layer_four_path
-//   },
-//   final: {
-//     d: layer_four_path_II,
-//     transition: {
-//       ease: "easeInOut",
-//       duration: 1,
-//       repeat: Infinity,
-//     }
-//   }
-// }
 const layer_path_one = [layer_one_path, layer_one_path_II, layer_one_path];
 const layer_path_two = [layer_two_path, layer_two_path_II, layer_two_path];
 const layer_path_three = [layer_three_path, layer_three_path_II, layer_three_path];
 const layer_path_four = [layer_four_path, layer_four_path_II, layer_four_path];
+const bottom_layer_path_one = [bottom_layer_one_path, bottom_layer_one_path_II, bottom_layer_one_path];
+const bottom_layer_path_two = [bottom_layer_two_path, bottom_layer_two_path_II, bottom_layer_two_path];
 
 export default function SectionDemarcation({ type } : SectionDemarcationProps) {
   const [pathIndex, setPathIndex] = useState(0);
@@ -87,6 +35,8 @@ export default function SectionDemarcation({ type } : SectionDemarcationProps) {
   const flubber_layer_path_two = useFlubber(progress, layer_path_two);
   const flubber_layer_path_three = useFlubber(progress, layer_path_three);
   const flubber_layer_path_four = useFlubber(progress, layer_path_four);
+  const flubber_bottom_layer_path_one = useFlubber(progress, bottom_layer_path_one);
+  const flubber_bottom_layer_path_two = useFlubber(progress, bottom_layer_path_two);
 
   useEffect(() => {
     const animation = animate(progress, pathIndex, {
@@ -104,8 +54,6 @@ export default function SectionDemarcation({ type } : SectionDemarcationProps) {
       },
     });
 
-    // console.log("Inside the useEffect hook!");
-    
     return () => animation.stop();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathIndex]);
@@ -113,12 +61,9 @@ export default function SectionDemarcation({ type } : SectionDemarcationProps) {
   // console.log(pathIndex);
 
   return (
-    <div className="absolute w-full -bottom-1">
-      {/* {type == "mini" ? <MiniSectionDemarcationIcon /> : <SectionDemarcationIcon />} */}
-      {type == "mini" ? (
-        ''
-      ) : (
-        <svg viewBox="0 0 900 200">
+    type != "mini" ? (
+      <div className="absolute w-full -bottom-1">
+         <svg viewBox="0 0 900 200">
           <motion.path 
             d={flubber_layer_path_one} 
             fill="#201d7b66" 
@@ -139,7 +84,21 @@ export default function SectionDemarcation({ type } : SectionDemarcationProps) {
             fill="#fdfdfd" 
           />
         </svg>
-      )}
-    </div>
+      </div>
+    ) : (
+      <div className="absolute -left-1 w-[110%]">
+        <svg viewBox="0 0 900 200">
+          <motion.path 
+            d={flubber_bottom_layer_path_one}
+            fill="#c1b7e880"
+          />
+
+          <motion.path 
+            d={flubber_bottom_layer_path_two}
+            fill="#d6ceefC2"
+          />
+        </svg>
+      </div>
+    )      
   )
 }

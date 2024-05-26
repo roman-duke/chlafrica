@@ -3,17 +3,87 @@ import ChlafricaSustainability from "@assets/images/chlafrica_sustainability.png
 import ChlafricaShakingHands from "@assets/images/chlafrica_shaking_hands.png";
 import CommunitySupport from "@assets/images/chlafrica_support.png";
 import ServiceCard from "@components/ServiceCard/ServiceCard";
+import { motion } from "framer-motion";
+
+// const list: Variants = {
+//   initial: {
+//     // opacity: 0.5,
+//   },
+
+//   final: {
+//     opacity: 1,
+//     transition: {
+//       staggerChildren: 2.5,
+//     }
+//   }
+// }
+
+// const list_item: Variants = {
+//   initial: {
+//     y: 40,
+//     opacity: 0,
+//   },
+  
+//   final: {
+//     y: 0,
+//     opacity: 0,
+//     transition: {
+//       duration: 1,
+//       type: "spring",
+//     }
+//   }
+// }
 
 export default function Services() {
   return (
     <div className="py-5 lg:py-10 backdrop-blur-sm">
       <div className="flex flex-col items-center">
-        <h2 className="text-2xl lg:text-4xl font-bold text-brand-accent">
-          Promoting Development
-          <span className="hidden lg:inline-block">&nbsp;through</span> 
-          <span className="lg:hidden">&nbsp;via</span>
+        <h2 className="lg:text-center text-2xl lg:text-4xl font-bold text-brand-accent">
+          We Are Your One-Stop Haven <br className="lg:hidden"/>
+          <span className="inline-block w-full text-center">&nbsp;for Everything</span> 
+          {/* <span className="hidden lg:inline-block">&nbsp;for Everything Business Growth</span>  */}
+          {/* <span className="lg:hidden">&nbsp;via</span> */}
+          <motion.span
+            className="flex justify-center items-center text-brand-earth_yellow h-[50px] relative w-full overflow-hidden"
+          >
+            Business Growth
+          </motion.span>
         </h2>
-        <span className="text-brand-earth_yellow text-2xl lg:text-4xl font-bold">Community Support</span>
+
+        {/* <motion.span 
+          className="flex justify-center items-center h-[50px] relative w-full overflow-hidden"
+          // variants={list}
+          initial="initial"
+          animate="final"
+        >
+          <motion.span
+            className="absolute text-brand-earth_yellow text-2xl lg:text-4xl font-bold"
+            // variants={list_item}
+          >
+            Business Incubation
+          </motion.span>
+
+          <motion.span 
+            className="absolute text-brand-earth_yellow text-2xl lg:text-4xl font-bold"
+            // variants={list_item}
+          >
+            Business Sustainability
+          </motion.span>
+
+          <motion.span 
+            className="absolute text-brand-earth_yellow text-2xl lg:text-4xl font-bold"
+            // variants={list_item}
+          >
+            Consulting Partnership
+          </motion.span>
+
+          <motion.span 
+            className="absolute text-brand-earth_yellow text-2xl lg:text-4xl font-bold"
+            // variants={list_item}
+          >
+            Community Support
+          </motion.span>
+        </motion.span> */}
       </div>
 
       <div className="flex lg:flex-row flex-col items-center mt-12 gap-4 lg:*:border-r">
