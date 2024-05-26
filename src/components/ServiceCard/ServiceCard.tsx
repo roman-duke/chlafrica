@@ -11,11 +11,11 @@ export default function ServiceCard({ title, content, imgSource } : ServiceCardP
         <img src={imgSource} className="w-32 h-32 object-contain"/>
       ) : null}
 
-      <h3 className="text-brand-accent text-xl font-semibold text-center">
+      <h3 className="text-brand-accent text-lg lg:text-xl font-semibold text-center">
         {title}
       </h3>
 
-      <p className="font-normal text-gray-400 text-base text-center px-10">
+      <p className="font-normal text-gray-400 text-md lg:text-base text-center px-10">
         {content}
       </p>
     </div>

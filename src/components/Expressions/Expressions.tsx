@@ -3,10 +3,10 @@ import ExpressionCard from "@components/ExpressionCard/ExpressionCard";
 export default function Expressions() {
   return (
     <div className="flex flex-col max-w-[1140px] items-center m-auto">
-      <h2 className="text-4xl font-bold text-brand-accent">Expressions</h2>
-      <h3 className="text-lg font-medium text-brand-earth_yellow uppercase mt-2">Stories & Projects</h3>
+      <h2 className="text-2xl lg:text-4xl font-bold text-brand-accent">Expressions</h2>
+      <h3 className="text-md lg:text-lg font-medium text-brand-earth_yellow uppercase mt-2">Stories & Projects</h3>
 
-      <div className="flex">
+      <div className="flex flex-col lg:flex-row">
         <ExpressionCard 
           category="Articles"
           title="The African Union Agenda 2063: The future of Africa"

@@ -2,7 +2,7 @@ import StatsCard from "./StatsCard"
 
 export default function Stats() {
   return (
-    <div className="flex w-[600px] bg-white rounded-lg shadow-md">
+    <div className="flex flex-col lg:flex-row lg:w-[600px] bg-white rounded-lg border-t shadow-md lg:shadow-md lg:border-t-0">
       <StatsCard 
         total="2"
         title="Years of service"

@@ -12,14 +12,14 @@ import Footer from "@components/Footer/Footer"
 export default function Home() {
   return (
     <div className="">
-      <section className="text-sm bg-brand-accent max-h-lvh w-full">
+      <section className="text-sm bg-brand-accent w-full">
         <Navbar />
 
-        <div className="m-auto h-4/6 max-w-[1140px]">
+        <div className="m-auto max-w-[1140px]">
           <Hero />
         </div>
 
-        <div className="relative h-[300px] w-full">
+        <div className="relative h-[100px] lg:h-[500px]">
           <SectionDemarcation />
         </div>
       </section>
@@ -28,8 +28,8 @@ export default function Home() {
         <Services />
       </section>
 
-      <section className="max-w-[1140px] m-auto bg-custom-light-gray px-16 pb-8">
-        <div className="flex items-center justify-between">
+      <section className="max-w-[1140px] m-auto bg-custom-light-gray lg:px-16 lg:pb-8">
+        <div className="flex flex-col gap-6 lg:flex-row items-center justify-between">
           <Collage />
           <Stats />
         </div>
@@ -37,7 +37,7 @@ export default function Home() {
         <Partners />
       </section>
 
-      <section className="w-full relative z-50 bg-gradient-to-b from-brand-accent_two to-custom-light-gray pt-24">
+      <section className="w-full relative z-50 bg-gradient-to-b from-brand-accent_two to-custom-light-gray pt-10 lg:pt-24">
         <Expressions />
         <MiniContact />
       </section>
