@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export default function Navbar() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [activeLink, setActiveLink] = useState(0);
+  const [activeLink] = useState(0);
 
   return (
     <header className="border-b border-[#FFFFFF25]">
