@@ -3,7 +3,7 @@ import Button from "@components/Button/Button"
 
 export default function Hero() {
   return (
-    <div className="relative flex flex-col lg:flex-row pt-16 mt-6 items-center justify-around">
+    <div className="relative flex flex-col lg:flex-row pt-16 lg:pt-24 mt-6 items-center justify-around">
       
       <div className="absolute -rotate-[30deg] left-0 top-4 tribe-pattern bg-pattern-1 ml-3 w-16 lg:w-20 h-4" />
       <div className="absolute -rotate-[30deg] left-0 top-6 tribe-pattern bg-pattern-1 ml-3 w-16 lg:w-20 h-4 bg-cover" />

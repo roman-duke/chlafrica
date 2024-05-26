@@ -19,7 +19,7 @@ export default function Home() {
           <Hero />
         </div>
 
-        <div className="relative h-[100px] lg:h-[500px]">
+        <div className="relative h-[100px] md:h-[150px] lg:h-[250px]">
           <SectionDemarcation />
         </div>
       </section>

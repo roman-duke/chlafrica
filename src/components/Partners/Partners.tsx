@@ -10,7 +10,7 @@ export default function Partners() {
       <h2 className="text-2xl lg:text-3xl font-medium text-brand-earth_yellow lg:uppercase">Our Partners</h2>
       <span className="px-4 lg:px-0 mt-3 text-md lg:text-lg font-normal text-brand-accent text-center">
         Here's a snapshot of our valued clients, including partners we have 
-        collaborated with to drive Africa's development forward while empowering<br/> 
+        collaborated with to drive Africa's development forward while empowering <br className="lg:hidden" /> 
         young African entrepreneurs!
       </span>
 
