@@ -8,6 +8,7 @@ import Partners from "@components/Partners/Partners"
 import Expressions from "@components/Expressions/Expressions"
 import MiniContact from "@components/MiniContact/MiniContact"
 import Footer from "@components/Footer/Footer"
+import Stages from "@components/Stages/Stages"
 
 export default function Home() {
   return (
@@ -33,9 +34,16 @@ export default function Home() {
           <Collage />
           <Stats />
         </div>
+      </section>
 
+      <section className="pt-12 pb-8 px-8">
+        <Stages />
+      </section>
+      
+      <section>
         <Partners />
       </section>
+
 
       <section className="w-full relative z-50 bg-gradient-to-b from-brand-accent_two to-custom-light-gray pt-10 lg:pt-24">
         <Expressions />

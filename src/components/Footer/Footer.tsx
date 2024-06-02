@@ -109,9 +109,17 @@ export default function Footer() {
           <span className="basis-1/3 text-slate-400 text-center text-xs lg:text-sm">Designed by Gravenite</span>
 
           <div className="basis-1/3 flex justify-center items-center gap-4">
-            <TwitterIcon className="w-4 h-4 fill-black" />
-            <InstagramIcon className="w-4 h-4" />
-            <YouTubeIcon className="w-4 h-4" />
+            <a href="https://x.com/chlafrica" target="_blank">
+              <TwitterIcon className="w-4 h-4 fill-black" />
+            </a>
+
+            <a href="https://www.instagram.com/chlafrica/" target="_blank">
+              <InstagramIcon className="w-4 h-4" />
+            </a>
+
+            <a href="https://www.youtube.com/@chlafrica" target="_blank">
+              <YouTubeIcon className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </div>

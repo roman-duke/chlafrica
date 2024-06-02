@@ -7,7 +7,7 @@ export default function Stats() {
         total="2"
         title="Years of Impact"
         content="Our team has consistently delivered exceptional 
-                performance,sha ping Africa's development."
+                performance, shaping Africa's development."
       />
 
       <StatsCard

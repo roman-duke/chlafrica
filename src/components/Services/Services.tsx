@@ -39,7 +39,7 @@ export default function Services() {
     <div className="py-5 lg:py-10 backdrop-blur-sm">
       <div className="flex flex-col items-center">
         <h2 className="lg:text-center text-2xl lg:text-4xl font-bold text-brand-accent">
-          We Are Your One-Stop Haven <br className="lg:hidden"/>
+          Your One-Stop Haven <br className="lg:hidden"/>
           <span className="inline-block w-full text-center">&nbsp;for Everything</span> 
           {/* <span className="hidden lg:inline-block">&nbsp;for Everything Business Growth</span>  */}
           {/* <span className="lg:hidden">&nbsp;via</span> */}

@@ -28,15 +28,15 @@ export default function Hero() {
 
       <div className="px-9 lg:px-0">
         <h1 className="pt-4 text-3xl lg:px-0 lg:pt-0 lg:text-5xl text-custom-light-gray font-medium">
-          Providing Sustainable Solutions <br className="hidden lg:inline-block" /> 
+          Providing Sustainability Solutions <br className="hidden lg:inline-block" /> 
           to Small and Medium Sized <br className="hidden lg:inline-block" /> 
           Entreprises in Africa 
         </h1>
 
         <p className="mt-3 lg:mt-5 text-brand text-justify lg:text-left">
-          CHL Africa is a social enterprise operating within the framework of 
-          Africapitalism by supporting SMEs<br className="hidden lg:inline-block" /> and initiatives positively impacting
-          Africa while being financially sustainable.
+          We are a social enterprise operating withing the principles of Africapitalism, empowering SME's 
+          and initiatives that drive<br className="hidden lg:inline-block" /> positive change across Africa, all while ensuring 
+          financial sustainable.
         </p>
 
         <div className="mt-4 lg:mt-8">
