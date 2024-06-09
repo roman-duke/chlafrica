@@ -4,7 +4,8 @@ import TwitterIcon from "@assets/icons/twitter.svg?react";
 import YouTubeIcon from "@assets/icons/youtube.svg?react";
 import MobileNavbar from "./MobileNavbar";
 import ChlafricaLogo from "@assets/images/chlafrica_logo.png";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 interface NavbarProps {
   activeLink: number,
@@ -13,6 +14,15 @@ interface NavbarProps {
 
 export default function Navbar({ activeLink, setActiveLink } : NavbarProps) {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname.includes("about-us")) {
+      setActiveLink(1);
+    } else {
+      setActiveLink(0);
+    }
+  }, [location.pathname, setActiveLink])
 
   return (
     <header className="border-b border-[#FFFFFF25] bg-brand-accent w-full">
@@ -25,7 +35,6 @@ export default function Navbar({ activeLink, setActiveLink } : NavbarProps) {
           <li 
             className={`${activeLink == 0 ? 'bg-[#f3ba2ad3] font-semibold' : 'text-custom-light-gray'} font-light cursor-pointer text-md hover:bg-[#f3ba2aa9] px-2 py-5 rounded-sm transition`}
             onClick={() => {
-              setActiveLink(0);
               navigate('/');
             }}
           >
@@ -34,7 +43,6 @@ export default function Navbar({ activeLink, setActiveLink } : NavbarProps) {
           <li 
             className={`${activeLink == 1 ? 'bg-[#f3ba2ad3] font-semibold' : 'text-custom-light-gray'} font-light text-md cursor-pointer hover:bg-[#f3ba2aa9] px-2 py-5 rounded-sm transition`}
             onClick={() => {
-              setActiveLink(1);
               navigate('about-us');
             }}
           >
@@ -51,9 +59,7 @@ export default function Navbar({ activeLink, setActiveLink } : NavbarProps) {
           </li>
         </ul>
 
-        <MobileNavbar 
-          setActiveLink={setActiveLink}
-        />
+        <MobileNavbar />
 
         <div className="hidden lg:flex items-center justify-end gap-4 basis-1/3">
           <div className="flex gap-3">
