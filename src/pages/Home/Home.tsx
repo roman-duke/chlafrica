@@ -36,10 +36,9 @@ export default function Home() {
         <Stages />
       </section>
       
-      <section>
+      <section className="overflow-hidden">
         <Partners />
       </section>
-
 
       <section className="w-full relative z-50 bg-gradient-to-b from-brand-accent_two to-custom-light-gray pt-10 lg:pt-24">
         <Expressions />

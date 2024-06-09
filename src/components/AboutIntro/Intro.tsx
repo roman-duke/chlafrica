@@ -71,41 +71,44 @@ export default function Intro() {
           <div className="absolute bottom-0 left-0 translate-x-4 translate-y-2 rotate-45 w-[3px] h-14 bg-brand-accent" />
         </div>
 
-        <p className="relative mt-10 z-10 text-lg text-center text-slate-400">
+        <p className="relative mt-10 mb-5 max-w-[700px] z-10 text-lg text-center text-slate-400">
           We are a social enterprise operating within the framework of
           Africapitalism by supporting SMEs and initiatives positively impacting Africa while being
           financially sustainable.
         </p>
-
-        <div className="relative w-full my-4">
-          <img className="w-full h-full rounded-2xl object-cover" src={AboutImg1} alt="Abstract image of the About us page" />
-          <img className="absolute top-16 right-6 w-full h-full rounded-2xl object-cover" src={AboutImg2} alt="Abstract image of About us page" />
-        </div>
-
-        <div className="self-start mt-16 *:py-4">
-          <div>
-            <h2 className="uppercase text-brand-accent text-xl font-semibold">
-              Vision
-            </h2>
-            <p className="text-slate-400">
-              To see more Africans at home and in the diaspora
-              actively contributing towards the prosperity and 
-              stability of the African continent
-            </p>
+        
+        <div className="grid lg:grid-cols-2 max-w-[900px] mt-4 lg:mb-14 lg:gap-x-8">
+          <div className="relative flex justify-center w-full">
+            <img className="w-72 h-[375px] lg:h-[550px] lg:w-auto rounded-2xl object-cover" src={AboutImg1} alt="Abstract image of the About us page" />
+            <img className="w-72 h-[375px] absolute lg:h-[550px] lg:w-auto top-[15%] right-[15%] lg:right-16 lg:top-12 rounded-2xl object-cover" src={AboutImg2} alt="Abstract image of About us page" />
           </div>
 
-          <div>
-            <h2 className="uppercase text-brand-accent text-xl font-semibold">
-              Mission
-            </h2>
-            <p className="text-slate-400">
-            To build and sustainably grow 1% of SMEs and
-            initiatives in Africa that create both economic
-            prosperity and social wealth in a sustainable
-            fashion in Africa
-            </p>
+          <div className="self-start lg:self-center mt-16 *:py-4">
+            <div>
+              <h2 className="uppercase text-brand-accent text-xl font-semibold">
+                Vision
+              </h2>
+              <p className="text-slate-400">
+                To see more Africans at home and in the diaspora
+                actively contributing towards the prosperity and 
+                stability of the African continent.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="uppercase text-brand-accent text-xl font-semibold">
+                Mission
+              </h2>
+              <p className="text-slate-400">
+              To build and sustainably grow 1% of SMEs and
+              initiatives in Africa that create both economic
+              prosperity and social wealth in a sustainable
+              fashion in Africa.
+              </p>
+            </div>
           </div>
         </div>
+
       </div>
     </>
   )

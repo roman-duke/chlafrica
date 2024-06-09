@@ -5,12 +5,14 @@ import YouTubeIcon from "@assets/icons/youtube.svg?react";
 import { Variants, motion } from 'framer-motion';
 import { useState, useRef, RefObject } from 'react';
 import { cubicBezier } from "framer-motion/dom";
+import { useNavigate } from "react-router-dom";
 // import './navbar.scss';
 
 export default function MobileNavbar() {
   const [isOpen, setIsOpen] = useState(false);
   const elementRef: RefObject<HTMLDivElement> = useRef(null);
   const { innerWidth: width } = window;
+  const navigate = useNavigate();
   
   const dashVariants: Variants = {
     open: i => ({
@@ -39,11 +41,13 @@ export default function MobileNavbar() {
   const navBgVariants: Variants = {
     initial: {
       x: width,
+      display: 'none'
     },
 
     open: {
       // x: (elementRef.current ? -(elementRef.current?.clientWidth) + 100 : 0),
       x: 0,
+      display: 'flex',
       transition: {
         // type: 'tween',
         ease: cubicBezier(0.61, 1, 0.88, 1),
@@ -54,6 +58,7 @@ export default function MobileNavbar() {
 
     closed: {
       x: width,
+      display: 'none',
       transition: {
         ease: cubicBezier(0.61, 1, 0.88, 1),
         duration: 0.5,
@@ -105,6 +110,9 @@ export default function MobileNavbar() {
                   initial={false}
                   className="text-xl py-2"
                   variants={navLinkVariants}
+                  onClick={() => {
+                    idx !== 2 ? navigate(pagesPath[idx]) : null
+                  }}
               >{item.description}</motion.li>
             ))}
           </ul>
@@ -139,8 +147,11 @@ type linksDataType = { id: number, description: string }[]
 
 const linksData: linksDataType = [
   {id: 0, description: "Home"},
-  {id: 1, description: "Services"},
-  {id: 2, description: "About us"},
-  {id: 3, description: "News"},
-  {id: 4, description: "Contact us"},
+  {id: 1, description: "About us"},
+  {id: 2, description: "Expressions"},
+]
+
+const pagesPath = [
+  '/',
+  'about-us'
 ]

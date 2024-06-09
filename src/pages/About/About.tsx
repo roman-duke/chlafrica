@@ -1,5 +1,6 @@
 import Team from "@components/Team/Team";
 import Intro from "@components/AboutIntro/Intro";
+import MiniContact from "@components/MiniContact/MiniContact";
 // import AboutIntroDemarcationIcon from "@assets/icons/about-demarcator.svg?react"
 
 export default function About() {
@@ -10,8 +11,12 @@ export default function About() {
       <Intro />
     </section>
 
-    <section>
+    <section className="m-auto max-w-[1024px]">
       <Team />
+    </section>
+
+    <section className="">
+      <MiniContact />
     </section>
     </>
   )

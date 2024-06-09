@@ -11,7 +11,7 @@ interface NavbarProps {
   setActiveLink: (arg: number) => void,
 }
 
-export default function Navbar({ activeLink } : NavbarProps) {
+export default function Navbar({ activeLink, setActiveLink } : NavbarProps) {
   const navigate = useNavigate();
 
   return (
@@ -23,28 +23,28 @@ export default function Navbar({ activeLink } : NavbarProps) {
 
         <ul className="hidden lg:flex gap-3 lg:gap-12 justify-center items-center basis-1/3">  
           <li 
-            className={`${activeLink == 0 ? 'bg-[#f3ba2ad3] font-semibold' : ''} font-light text-md px-2 py-5 rounded-sm`}
+            className={`${activeLink == 0 ? 'bg-[#f3ba2ad3] font-semibold' : ''} font-light cursor-pointer text-md px-2 py-5 rounded-sm`}
             onClick={() => {
-              // setActiveLink(0);
+              setActiveLink(0);
               navigate('/');
             }}
           >
             Home
           </li>
           <li 
-            className={`font-light text-md text-custom-light-gray px-2 py-4`}
+            className={`${activeLink == 1 ? 'bg-[#f3ba2ad3] font-semibold' : ''} font-light text-md cursor-pointer hover:bg-[#f3ba2aa9] text-custom-light-gray px-2 py-5 rounded-sm transition`}
             onClick={() => {
-              // setActiveLink(1);
+              setActiveLink(1);
               navigate('about-us');
             }}
           >
             About us
           </li>
           <li 
-            className={`font-light text-md text-custom-light-gray px-2 py-4`}
+            className={`${activeLink == 2 ? 'bg-[#f3ba2ad3] font-semibold' : ''} font-light text-md cursor-pointer hover:bg-[#f3ba2aa9] text-custom-light-gray px-2 py-5 rounded-sm transition`}
             onClick={() => {
               // setActiveLink(1);
-              navigate('expressions');
+              // navigate('expressions');
             }}
           >
             Expressions
