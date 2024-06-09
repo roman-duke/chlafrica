@@ -1,5 +1,4 @@
 import Hero from "@components/Hero/Hero"
-import Navbar from "@components/Navbar/Navbar"
 import Services from "@components/Services/Services"
 import SectionDemarcation from "@components/SectionDemarcation/SectionDemarcation"
 import Collage from "@components/Collage/Collage"
@@ -7,15 +6,12 @@ import Stats from "@components/Stats/Stats"
 import Partners from "@components/Partners/Partners"
 import Expressions from "@components/Expressions/Expressions"
 import MiniContact from "@components/MiniContact/MiniContact"
-import Footer from "@components/Footer/Footer"
 import Stages from "@components/Stages/Stages"
 
 export default function Home() {
   return (
-    <div className="">
-      <section className="text-sm bg-brand-accent w-full">
-        <Navbar />
-
+    <>
+      <section className="text-sm bg-brand-accent w-full m-0">
         <div className="m-auto max-w-[1140px]">
           <Hero />
         </div>
@@ -49,19 +45,6 @@ export default function Home() {
         <Expressions />
         <MiniContact />
       </section>
-
-      <footer className="relative">
-        <div className="relative h-[96px] lg:h-[260px] overflow-hidden">
-          <SectionDemarcation type="mini" />
-        </div>
-
-        <div className="w-full bg-gradient-to-b from-[#d6ceefEA] to-custom-light-gray">
-          <div className="max-w-[960px] m-auto">
-            <Footer />
-          </div>
-        </div>
-
-      </footer>
-    </div>
+    </>
   )
 }

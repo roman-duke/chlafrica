@@ -19,3 +19,8 @@
   -webkit-mask: var(--mask);
   mask: var(--mask);
 }
+
+/** Utility for word spacing **/
+.word-spacing {
+  word-spacing: .75rem;
+}
