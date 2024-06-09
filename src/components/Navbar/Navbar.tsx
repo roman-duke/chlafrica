@@ -63,9 +63,17 @@ export default function Navbar({ activeLink, setActiveLink } : NavbarProps) {
 
         <div className="hidden lg:flex items-center justify-end gap-4 basis-1/3">
           <div className="flex gap-3">
-            <InstagramIcon className="w-5 h-5 fill-slate-200 opacity-35" />
-            <TwitterIcon className="w-5 h-5 fill-slate-200 opacity-35" />
-            <YouTubeIcon className="w-5 h-5 fill-slate-200 opacity-35" />
+            <a href="https://www.instagram.com/chlafrica/" target="_blank">
+              <InstagramIcon className="w-5 h-5 fill-slate-200 opacity-35" />
+            </a>
+
+            <a href="https://x.com/chlafrica" target="_blank">
+              <TwitterIcon className="w-5 h-5 fill-slate-200 opacity-35" />
+            </a>
+
+            <a href="https://www.youtube.com/@chlafrica" target="_blank">
+              <YouTubeIcon className="w-5 h-5 fill-slate-200 opacity-35" />
+            </a>
           </div>
           <SecondaryButton 
             title="Send a message"

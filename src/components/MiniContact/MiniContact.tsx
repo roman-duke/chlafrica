@@ -8,10 +8,12 @@ export default function HomeContact() {
         one? Let's Collaborate
       </h2>
 
-      <SuperFancyButton
-        title="Schedule a Call"
-        bgColor="bg-brand-accent_two"
-      />
+      <a href="tel:+2349087109454">
+        <SuperFancyButton
+          title="Schedule a Call"
+          bgColor="bg-brand-accent_two"
+        />
+      </a>
     </div>
   )
 }
