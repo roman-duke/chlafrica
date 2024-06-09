@@ -24,8 +24,8 @@ export default function About() {
 
       <motion.div
         initial={{ scaleX: 1 }}
-        animate={{ scaleX: 0, transition: { duration: 0.25, ease: "circOut" } }}
-        exit={{ scaleX: 1, transition: { duration: 0.25, ease: "circIn" } }}
+        animate={{ scaleX: 0, transition: { duration: 0.5, ease: "circOut" } }}
+        exit={{ scaleX: 1, transition: { duration: 0.5, ease: "circIn" } }}
         style={{ originX: isPresent ? 0 : 1 }}
         className="fixed inset-0 bg-brand-accent z-50"
       />
