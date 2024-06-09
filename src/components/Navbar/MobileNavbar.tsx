@@ -6,9 +6,12 @@ import { Variants, motion } from 'framer-motion';
 import { useState, useRef, RefObject } from 'react';
 import { cubicBezier } from "framer-motion/dom";
 import { useNavigate } from "react-router-dom";
-// import './navbar.scss';
 
-export default function MobileNavbar() {
+interface MobileNavbarProps {
+  setActiveLink: (arg: number) => void,
+}
+
+export default function MobileNavbar({ setActiveLink } : MobileNavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const elementRef: RefObject<HTMLDivElement> = useRef(null);
   const { innerWidth: width } = window;
@@ -111,7 +114,10 @@ export default function MobileNavbar() {
                   className="text-xl py-2"
                   variants={navLinkVariants}
                   onClick={() => {
-                    idx !== 2 ? navigate(pagesPath[idx]) : null
+                    if (idx !== 2) {
+                      navigate(pagesPath[idx]);
+                      setActiveLink(idx);
+                    }
                   }}
               >{item.description}</motion.li>
             ))}
