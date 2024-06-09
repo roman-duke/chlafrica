@@ -7,10 +7,10 @@ import Partners from "@components/Partners/Partners"
 import Expressions from "@components/Expressions/Expressions"
 import MiniContact from "@components/MiniContact/MiniContact"
 import Stages from "@components/Stages/Stages"
-// import { motion, useIsPresent } from "framer-motion"
+import { motion, useIsPresent } from "framer-motion"
 
 export default function Home() {
-  // const isPresent = useIsPresent();
+  const isPresent = useIsPresent();
   
   return (
     <>
@@ -48,13 +48,13 @@ export default function Home() {
         <MiniContact />
       </section>
 
-      {/* <motion.div
+      <motion.div
         initial={{ scaleX: 1 }}
         animate={{ scaleX: 0, transition: { duration: 0.25, ease: "circOut" } }}
         exit={{ scaleX: 1, transition: { duration: 0.25, ease: "circIn" } }}
         style={{ originX: isPresent ? 0 : 1 }}
         className="fixed inset-0 bg-brand z-50"
-      /> */}
+      />
     </>
   )
 }
