@@ -1,8 +1,6 @@
-import AfricanWoman from "@assets/images/african_woman.webp";
+import AfricanBaker from "@assets/images/chlafrica_baker.jpg";
 import AfricanWorker from "@assets/images/africa_work.jpg";
-import AfricanWorker2 from "@assets/images/africa_work_II.jpg";
-import AfricanWorker3 from "@assets/images/africa_work_III.jpg";
-import AfricanDevelopment from "@assets/images/africa_human_development.jpeg";
+import AfricanStartup from "@assets/images/chlafrica_baobab_I.jpg";
 import Button from "@components/Button/Button"
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -12,18 +10,16 @@ export default function Hero() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setImgIdx((imgIdx) => (imgIdx + 1)%5);
+      setImgIdx((imgIdx) => (imgIdx + 1)%3);
     }, 6000);
 
     return () => clearInterval(interval);
   }, []);
 
   const heroImages = [
-    AfricanWoman,
+    AfricanBaker,
     AfricanWorker,
-    AfricanWorker2,
-    AfricanWorker3,
-    AfricanDevelopment
+    AfricanStartup,
   ]
 
   return (
@@ -46,7 +42,7 @@ export default function Hero() {
         </div>
 
         <div className="relative z-10 flex justify-center shadow-2xl">
-          <AnimatePresence mode="popLayout">
+          <AnimatePresence mode="wait">
             <motion.img
               initial={{opacity:0}}
               animate = {{opacity: 1, transition:{duration: 0.5}}}
@@ -67,7 +63,7 @@ export default function Hero() {
           <p className="mt-3 lg:mt-5 max-w-[400px] text-brand text-justify lg:text-left">
             We are a social enterprise operating withing the principles of Africapitalism, empowering SME's 
             and initiatives that drive<br className="hidden lg:inline-block" /> positive change across Africa, all while ensuring 
-            financial sustainable.
+            financial sustainability.
           </p>
 
           <div className="mt-4 lg:mt-8">

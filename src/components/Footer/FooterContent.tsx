@@ -3,9 +3,11 @@ import RightArrowIcon from "@assets/icons/right-arrow.svg?react"
 import LocationPinIcon from "@assets/icons/location-pin.svg?react"
 import EmailIcon from "@assets/icons/email.svg?react"
 import PhoneIcon from "@assets/icons/phone.svg?react"
-import TwitterIcon from "@assets/icons/twitter.svg?react"
+import TwitterIcon from "@assets/icons/twitterX.svg?react"
 import InstagramIcon from "@assets/icons/instagram.svg?react"
 import YouTubeIcon from "@assets/icons/youtube.svg?react"
+import LinkedInIcon from "@assets/icons/linkedin.svg?react"
+import FacebookIcon from "@assets/icons/facebook.svg?react"
 
 export default function FooterContent() {
   return (
@@ -14,10 +16,10 @@ export default function FooterContent() {
         <div className="col-span-2 lg:col-span-1 flex flex-col items-center">
           <img className="w-40 h-24 object-contain" src={ChlafricaLogoText} />
           <p className="mb-4 text-sm text-slate-500 text-center lg:text-left">
-            We are promoting people-driven<br/>
-            development in Africa by supporting<br/> 
-            businesses and initiatives that create<br/>
-            jobs, improve living standards and bring<br/>
+            We are promoting people-driven <br className="lg:hidden" />
+            development in Africa by supporting <br className="lg:hidden"/> 
+            businesses and initiatives that create <br className="lg:hidden"/>
+            jobs, improve living standards and bring <br className="lg:hidden"/>
             long-term prosperity to Africa.
           </p>
           <div className="bg-brand-earth_yellow w-20 h-[2px]"/>
@@ -110,15 +112,23 @@ export default function FooterContent() {
 
           <div className="basis-1/3 flex justify-center items-center gap-4">
             <a href="https://x.com/chlafrica" target="_blank">
-              <TwitterIcon className="w-4 h-4 fill-black" />
+              <TwitterIcon className="size-6 fill-black" />
             </a>
 
             <a href="https://www.instagram.com/chlafrica/" target="_blank">
-              <InstagramIcon className="w-4 h-4" />
+              <InstagramIcon className="size-6" />
             </a>
 
             <a href="https://www.youtube.com/@chlafrica" target="_blank">
-              <YouTubeIcon className="w-4 h-4" />
+              <YouTubeIcon className="size-6" />
+            </a>
+            
+            <a className="hidden lg:inline-block" href="https://www.linkedin.com/in/oritsetsemaye-solo-edema-0707b8243/" target="_blank">
+              <LinkedInIcon className="size-6" />
+            </a>
+
+            <a className="hidden lg:inline-block" href="https://web.facebook.com/chlafrica/" target="_blank">
+              <FacebookIcon className="size-8" />
             </a>
           </div>
         </div>

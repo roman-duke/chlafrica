@@ -1,6 +1,8 @@
 import InstagramIcon from "@assets/icons/instagram.svg?react";
-import TwitterIcon from "@assets/icons/twitter.svg?react";
+import TwitterIcon from "@assets/icons/twitterX.svg?react";
 import YouTubeIcon from "@assets/icons/youtube.svg?react";
+import LinkedInIcon from "@assets/icons/linkedin.svg?react";
+import FacebookIcon from "@assets/icons/facebook.svg?react";
 // import Curve from "./curve/curve";
 import { Variants, motion } from 'framer-motion';
 import { useState, useRef, RefObject } from 'react';
@@ -122,19 +124,29 @@ export default function MobileNavbar() {
         <div className="nav-socials">
           <h5 className="uppercase pt-5 border-t border-black font-medium">Socials</h5>
           <div className="flex justify-between">
-            <a className="flex items-center gap-1">
-              <InstagramIcon className="w-6 h-6" />
-              <span>Instagram</span>
+            <a href="https://www.instagram.com/chlafrica/" target="_blank" className="flex items-center gap-1">
+              <InstagramIcon className="size-8" />
+              {/* <span>Instagram</span> */}
             </a>
 
-            <a className="flex items-center gap-1">
-              <TwitterIcon className="w-6 h-6" fill="black"/>
-              <span>Twitter</span>
+            <a href="https://x.com/chlafrica" target="_blank" className="flex items-center gap-1">
+              <TwitterIcon className="size-8" fill="black"/>
+              {/* <span>Twitter</span> */}
             </a>
 
-            <a className="flex items-center gap-1">
-              <YouTubeIcon className="w-6 h-6" />
-              <span>YouTube</span>
+            <a href="https://www.youtube.com/@chlafrica" target="_blank" className="flex items-center gap-1">
+              <YouTubeIcon className="size-8" />
+              {/* <span>YouTube</span> */}
+            </a>
+
+            <a href="https://www.linkedin.com/company/chara-s-haven-limited/" target="_blank" className="flex items-center gap-1">
+              <LinkedInIcon className="size-8" />
+              {/* <span>LinkedIn</span> */}
+            </a>
+
+            <a href="https://web.facebook.com/chlafrica/" target="_blank" className="flex items-center gap-1">
+              <FacebookIcon className="size-10" />
+              {/* <span>LinkedIn</span> */}
             </a>
           </div>
         </div>
