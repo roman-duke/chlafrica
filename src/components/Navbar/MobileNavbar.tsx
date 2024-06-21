@@ -112,6 +112,7 @@ export default function MobileNavbar() {
                   className="text-xl py-2"
                   variants={navLinkVariants}
                   onClick={() => {
+                    setIsOpen(false);
                     if (idx !== 2) {
                       navigate(pagesPath[idx]);
                     }
