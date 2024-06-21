@@ -124,7 +124,7 @@ export default function FooterContent() {
             </a>
             
             <a className="hidden lg:inline-block" href="https://www.linkedin.com/in/oritsetsemaye-solo-edema-0707b8243/" target="_blank">
-              <LinkedInIcon className="size-6" />
+              <LinkedInIcon className="fill-black size-6" />
             </a>
 
             <a className="hidden lg:inline-block" href="https://web.facebook.com/chlafrica/" target="_blank">

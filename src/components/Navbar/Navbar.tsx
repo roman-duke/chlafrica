@@ -1,28 +1,12 @@
 import SecondaryButton from "@components/Button/SecondaryButton";
 import InstagramIcon from "@assets/icons/instagram.svg?react";
-import TwitterIcon from "@assets/icons/twitter.svg?react";
+import TwitterIcon from "@assets/icons/twitterX.svg?react";
 import YouTubeIcon from "@assets/icons/youtube.svg?react";
 import MobileNavbar from "./MobileNavbar";
 import ChlafricaLogo from "@assets/images/chlafrica_logo.png";
-import { useLocation, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
-interface NavbarProps {
-  activeLink: number,
-  setActiveLink: (arg: number) => void,
-}
-
-export default function Navbar({ activeLink, setActiveLink } : NavbarProps) {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.pathname.includes("about-us")) {
-      setActiveLink(1);
-    } else {
-      setActiveLink(0);
-    }
-  }, [location.pathname, setActiveLink])
+export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#FFFFFF25] bg-brand-accent w-full">
@@ -32,33 +16,43 @@ export default function Navbar({ activeLink, setActiveLink } : NavbarProps) {
         </div>
 
         <ul className="hidden lg:flex gap-3 lg:gap-12 justify-center items-center basis-1/3">  
-          <li 
-            className={`${activeLink == 0 ? 'bg-[#f3ba2ad3] font-semibold' : 'text-custom-light-gray'} font-light cursor-pointer text-md hover:bg-[#f3ba2aa9] px-2 py-5 rounded-sm transition`}
-            onClick={() => {
-              navigate('/');
-            }}
-          >
-            Home
+          <li>
+            <NavLink
+              className={({isActive}) => 
+                `inline-block text-custom-light-gray font-light text-md cursor-pointer hover:border-b hover:border-[#f3ba2aa9] transition p-2 
+                ${isActive && 'border-b-2 border-[#f3ba2ad3] font-semibold'}`
+              }
+              to='/'
+            >
+              Home
+            </NavLink>
           </li>
-          <li 
-            className={`${activeLink == 1 ? 'bg-[#f3ba2ad3] font-semibold' : 'text-custom-light-gray'} font-light text-md cursor-pointer hover:bg-[#f3ba2aa9] px-2 py-5 rounded-sm transition`}
-            onClick={() => {
-              navigate('about-us');
-            }}
-          >
-            About us
+
+          <li>
+            <NavLink
+              className={({isActive}) => 
+                `inline-block text-custom-light-gray font-light text-md cursor-pointer hover:border-b hover:border-[#f3ba2aa9] transition p-2
+                ${isActive && 'border-b-2 border-[#f3ba2ad3] font-semibold'}`
+              }
+              to='/about-us'
+            >
+              About Us
+            </NavLink>
           </li>
-          <li 
-            className={`${activeLink == 2 ? 'bg-[#f3ba2ad3] font-semibold' : 'text-custom-light-gray'} font-light text-md cursor-pointer hover:bg-[#f3ba2aa9] px-2 py-5 rounded-sm transition`}
-            onClick={() => {
-              // setActiveLink(1);
-              // navigate('expressions');
-            }}
-          >
-            Expressions
+
+          <li>
+            <NavLink
+              className={({isActive}) => 
+                `inline-block text-custom-light-gray font-light text-md cursor-pointer hover:border-b hover:border-[#f3ba2aa9] transition p-2
+                ${isActive && 'border-b-2 border-[#f3ba2ad3] font-semibold'}`
+              }
+              to='/expressions'
+            >
+              Expressions
+            </NavLink>
           </li>
         </ul>
-
+        
         <MobileNavbar />
 
         <div className="hidden lg:flex items-center justify-end gap-4 basis-1/3">
@@ -75,10 +69,13 @@ export default function Navbar({ activeLink, setActiveLink } : NavbarProps) {
               <YouTubeIcon className="w-5 h-5 fill-slate-200 opacity-35" />
             </a>
           </div>
-          <SecondaryButton 
-            title="Send a message"
-            bgColor="bg-[#F3BA2Ad3]"
-          />
+          
+          <a href="https://forms.gle/4N6ymgfLpvBvj6scA" target="_blank">
+            <SecondaryButton 
+              title="Send a message"
+              bgColor="bg-[#F3BA2Ad3]"
+            />
+          </a>
         </div>
       </nav>
     </header>

@@ -8,7 +8,7 @@ export default function Team() {
   return (
     <>
     <h2 className="text-3xl text-center font-semibold text-brand-accent">Our Amazing Team</h2>
-    <div className="flex flex-col lg:flex-row gap-5 items-center justify-center mt-5 px-10">
+    <div className="flex flex-col lg:flex-row gap-12 lg:gap-6 items-center justify-center mt-5 px-10">
       <TeamCard 
         imageUrl={AyomideImg}
         name="Ayomide Fasan"

@@ -39,6 +39,9 @@ export default {
       },
       backgroundPosition: {
         right: 'calc(100% - 8px)'
+      },
+      blur: {
+        xs: '2px'
       }
     },
   },

@@ -81,7 +81,7 @@ export default function MobileNavbar() {
 
   return (
     <>
-      <motion.div className="cursor-pointer z-50 lg:hidden"
+      <motion.div className="sticky cursor-pointer z-50 lg:hidden"
         onClick={() => setIsOpen(!isOpen)}
         initial={false}
         animate={isOpen ? "open" : "closed"}
@@ -140,7 +140,7 @@ export default function MobileNavbar() {
             </a>
 
             <a href="https://www.linkedin.com/company/chara-s-haven-limited/" target="_blank" className="flex items-center gap-1">
-              <LinkedInIcon className="size-8" />
+              <LinkedInIcon className="fill-black size-8" />
               {/* <span>LinkedIn</span> */}
             </a>
 
