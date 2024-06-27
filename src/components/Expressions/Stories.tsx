@@ -1,4 +1,4 @@
-export default function Articles() {
+export default function Stories() {
   return (
     <div>
       
