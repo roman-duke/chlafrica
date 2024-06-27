@@ -113,9 +113,7 @@ export default function MobileNavbar() {
                   variants={navLinkVariants}
                   onClick={() => {
                     setIsOpen(false);
-                    if (idx !== 2) {
-                      navigate(pagesPath[idx]);
-                    }
+                    navigate(pagesPath[idx]);
                   }}
               >{item.description}</motion.li>
             ))}
