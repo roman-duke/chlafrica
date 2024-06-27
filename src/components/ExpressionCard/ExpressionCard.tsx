@@ -1,4 +1,5 @@
 import FancyButton from "@components/Button/FancyButton";
+import { Link } from "react-router-dom";
 
 interface ExpressionCardProps {
   [prop: string]: string,
@@ -24,10 +25,12 @@ export default function ExpressionCard(
           <p className="text-sm font-light opacity-65">{content}</p>
 
           <div className="mt-3">
-            <FancyButton 
-              title="Read more"
-              bgColor="bg-brand-accent_two"
-            />
+            <Link to='/expressions'>
+              <FancyButton 
+                title="Read more"
+                bgColor="bg-brand-accent_two"
+              />
+            </Link>
           </div>
         </div>
       </div>
