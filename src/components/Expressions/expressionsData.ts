@@ -1,0 +1,11 @@
+const expressionsData = [
+  {
+    articles: ""
+  },
+  {
+    events: ""
+  },
+  {
+
+  }
+]

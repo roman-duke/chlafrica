@@ -1,4 +1,5 @@
 import About from "@pages/About/About";
+import Expressions from "@pages/Expressions/Expressions";
 import Home from "@pages/Home/Home";
 import Root from "@pages/Root";
 import { createBrowserRouter } from "react-router-dom";
@@ -18,7 +19,7 @@ const AppRouter = createBrowserRouter([
       },
       {
         path: 'expressions',
-        element: <div>Eren Jaeger</div>
+        element: <Expressions />
       },
     ]
   }

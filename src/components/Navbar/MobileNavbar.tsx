@@ -167,5 +167,6 @@ const linksData: linksDataType = [
 
 const pagesPath = [
   '/',
-  'about-us'
+  'about-us',
+  'expressions'
 ]

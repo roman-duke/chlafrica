@@ -1,5 +1,5 @@
 import Team from "@components/Team/Team";
-import Intro from "@components/AboutIntro/Intro";
+import AboutIntro from "@components/Intro/AboutIntro";
 import MiniContact from "@components/MiniContact/MiniContact";
 import Commitment from "@components/Commitment/Commitment";
 // import { motion, useIsPresent } from "framer-motion";
@@ -12,7 +12,7 @@ export default function About() {
     <>
       <section className="relative">
         {/* <AboutIntroDemarcationIcon className="absolute rotate-180"/> */}
-        <Intro />
+        <AboutIntro />
       </section>
 
       <section className="m-auto py-8 max-w-[1140px]">
