@@ -3,7 +3,7 @@ import FooterContent from "./FooterContent";
 
 export default function Footer() {
   return (
-    <footer className="relative">
+    <footer className="relative z-20">
       <div className="relative h-[96px] lg:h-[260px] overflow-hidden">
         <SectionDemarcation type="mini" />
       </div>
