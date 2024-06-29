@@ -3,41 +3,22 @@ import TwitterIcon from "@assets/icons/twitterX.svg?react";
 import YouTubeIcon from "@assets/icons/youtube.svg?react";
 import LinkedInIcon from "@assets/icons/linkedin.svg?react";
 import FacebookIcon from "@assets/icons/facebook.svg?react";
+import CloseIcon from "@assets/icons/close.svg?react";
 // import Curve from "./curve/curve";
 import { Variants, motion } from 'framer-motion';
-import { useState, useRef, RefObject } from 'react';
+import { useRef, RefObject } from 'react';
 import { cubicBezier } from "framer-motion/dom";
 import { useNavigate } from "react-router-dom";
 
-export default function MobileNavbar() {
-  const [isOpen, setIsOpen] = useState(false);
+interface MobileNavbarProps {
+  showMobileNav: boolean;
+  setShowMobileNav: (arg: boolean) => void;
+}
+
+export default function MobileNavbar({ showMobileNav, setShowMobileNav } : MobileNavbarProps) {
   const elementRef: RefObject<HTMLDivElement> = useRef(null);
   const { innerWidth: width } = window;
   const navigate = useNavigate();
-  
-  const dashVariants: Variants = {
-    open: i => ({
-      // backgroundColor: "#fff",
-      rotate: 45 * (i == 0 ? -1 : (i !== 2 ? 1 : 0)),
-      y: 8 * (i == 0 && i !== 2 ?  1 : 0),
-      opacity: (i == 2 ? 0 : undefined),
-      transition: {
-        type: 'spring',
-      }
-    }),
-
-    closed: i => ({
-      backgroundColor: "#000",
-      rotate: 0,
-      y: 0,
-      x: 0,
-      opacity: 1,
-      transition: {
-        type: 'spring',
-        delay: (i == 2 ? 0.5 : 0),
-      }
-    })
-  }
 
   const navBgVariants: Variants = {
     initial: {
@@ -80,78 +61,68 @@ export default function MobileNavbar() {
   }
 
   return (
-    <>
-      <motion.div className="cursor-pointer z-50 lg:hidden"
-        onClick={() => setIsOpen(!isOpen)}
-        initial={false}
-        animate={isOpen ? "open" : "closed"}
-      >
-        {[0, 1, 2].map(i => (
-          <motion.div 
-            key={i}
-            className="w-7 h-1 my-1"
-            variants={dashVariants}
-            custom={i}
-          />
-        ))}
-      </motion.div>
-
-      <motion.div 
-        ref={elementRef}
-        className="md:hidden z-30 fixed left-0 top-0 flex flex-col justify-between h-screen w-screen py-10 px-6 bg-custom-white"
-        initial="initial"
-        animate={isOpen ? "open" : "closed"}
-        variants={navBgVariants}
-      > 
-        <div>
-          <h5 className="uppercase text-2xl font-medium border-b border-black pb-2">Navigation</h5>
-          <ul>
-            {linksData.map((item, idx) => (
-              <motion.li key={idx} 
-                  initial={false}
-                  className="text-xl py-2"
-                  variants={navLinkVariants}
-                  onClick={() => {
-                    setIsOpen(false);
-                    navigate(pagesPath[idx]);
-                  }}
-              >{item.description}</motion.li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="nav-socials">
-          <h5 className="uppercase pt-5 border-t border-black font-medium">Socials</h5>
-          <div className="flex justify-between">
-            <a href="https://www.instagram.com/chlafrica/" target="_blank" className="flex items-center gap-1">
-              <InstagramIcon className="size-8" />
-              {/* <span>Instagram</span> */}
-            </a>
-
-            <a href="https://x.com/chlafrica" target="_blank" className="flex items-center gap-1">
-              <TwitterIcon className="size-8" fill="black"/>
-              {/* <span>Twitter</span> */}
-            </a>
-
-            <a href="https://www.youtube.com/@chlafrica" target="_blank" className="flex items-center gap-1">
-              <YouTubeIcon className="size-8" />
-              {/* <span>YouTube</span> */}
-            </a>
-
-            <a href="https://www.linkedin.com/company/chara-s-haven-limited/" target="_blank" className="flex items-center gap-1">
-              <LinkedInIcon className="fill-black size-8" />
-              {/* <span>LinkedIn</span> */}
-            </a>
-
-            <a href="https://web.facebook.com/chlafrica/" target="_blank" className="flex items-center gap-1">
-              <FacebookIcon className="size-10" />
-              {/* <span>LinkedIn</span> */}
-            </a>
+    <motion.div 
+      ref={elementRef}
+      className="md:hidden z-50 fixed h-screen w-screen top-0 flex flex-col justify-between py-10 px-6 bg-custom-white"
+      initial="initial"
+      animate={showMobileNav ? "open" : "closed"}
+      variants={navBgVariants}
+    > 
+      <div>
+        <div className="flex w-full justify-between border-b border-black">
+          <h5 className="uppercase text-2xl font-medium pb-2">Navigation</h5>
+          <div
+            onClick={() => setShowMobileNav(false)}
+          >
+            <CloseIcon className="size-7"/>
           </div>
         </div>
-        {/* <Curve isOpen={isOpen}/> */}
-      </motion.div>
-    </>
+        <ul>
+          {linksData.map((item, idx) => (
+            <motion.li key={idx} 
+                initial={false}
+                className="text-xl py-2"
+                variants={navLinkVariants}
+                onClick={() => {
+                  setShowMobileNav(false);
+                  navigate(pagesPath[idx]);
+                }}
+            >{item.description}</motion.li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="nav-socials">
+        <h5 className="uppercase pt-5 border-t border-black font-medium">Socials</h5>
+        <div className="flex justify-between">
+          <a href="https://www.instagram.com/chlafrica/" target="_blank" className="flex items-center gap-1">
+            <InstagramIcon className="size-8" />
+            {/* <span>Instagram</span> */}
+          </a>
+
+          <a href="https://x.com/chlafrica" target="_blank" className="flex items-center gap-1">
+            <TwitterIcon className="size-8" fill="black"/>
+            {/* <span>Twitter</span> */}
+          </a>
+
+          <a href="https://www.youtube.com/@chlafrica" target="_blank" className="flex items-center gap-1">
+            <YouTubeIcon className="size-8" />
+            {/* <span>YouTube</span> */}
+          </a>
+
+          <a href="https://www.linkedin.com/company/chara-s-haven-limited/" target="_blank" className="flex items-center gap-1">
+            <LinkedInIcon className="fill-black size-8" />
+            {/* <span>LinkedIn</span> */}
+          </a>
+
+          <a href="https://web.facebook.com/chlafrica/" target="_blank" className="flex items-center gap-1">
+            <FacebookIcon className="size-10" />
+            {/* <span>LinkedIn</span> */}
+          </a>
+        </div>
+      </div>
+      {/* <Curve isOpen={isOpen}/> */}
+    </motion.div>
   )
 }
 

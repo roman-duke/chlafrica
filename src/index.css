@@ -8,11 +8,6 @@
 	--s: 2s; /* change speed */
 }	
 
-*, *:before, *:after {
-	box-sizing: border-box;
-	transform-style: preserve-3d;
-}
-
 /** Custom style for wavy lines **/
 .tribe-pattern {
   --mask:
@@ -125,4 +120,10 @@
 }
 .bars:nth-child(2) .bar:nth-child(7) {
 	animation-delay: calc(calc(var(--s) * -0.12) - calc(var(--s) / 2));
+}
+
+.mobile-nav {
+	position: fixed;
+	top: 20px;
+	z-index: 100 !important;
 }

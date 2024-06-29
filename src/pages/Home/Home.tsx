@@ -43,7 +43,7 @@ export default function Home() {
         <Partners />
       </section>
 
-      <section className="w-full relative z-50 bg-gradient-to-b from-brand-accent_two to-custom-light-gray pt-10 lg:pt-24">
+      <section className="w-full relative bg-gradient-to-b from-brand-accent_two to-custom-light-gray pt-10 lg:pt-24">
         <Expressions />
         <MiniContact />
       </section>

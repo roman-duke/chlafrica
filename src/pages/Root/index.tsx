@@ -27,7 +27,7 @@ export default function Root() {
           <main>
             <Outlet />
           </main>
-          <Footer />    
+          <Footer /> 
         </motion.div>  
       </AnimatePresence>
     )
