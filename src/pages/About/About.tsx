@@ -10,7 +10,7 @@ export default function About() {
 
   return (
     <>
-      <section className="relative">
+      <section className="relative overflow-hidden">
         {/* <AboutIntroDemarcationIcon className="absolute rotate-180"/> */}
         <AboutIntro />
       </section>

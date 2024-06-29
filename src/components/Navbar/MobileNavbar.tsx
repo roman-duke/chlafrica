@@ -81,7 +81,7 @@ export default function MobileNavbar() {
 
   return (
     <>
-      <motion.div className="sticky cursor-pointer z-50 lg:hidden"
+      <motion.div className="cursor-pointer z-50 lg:hidden"
         onClick={() => setIsOpen(!isOpen)}
         initial={false}
         animate={isOpen ? "open" : "closed"}
