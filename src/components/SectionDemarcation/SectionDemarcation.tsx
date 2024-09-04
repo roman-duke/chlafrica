@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { 
-  layer_one_path, 
-  layer_two_path, 
-  layer_three_path, 
-  layer_four_path, 
+import {
+  layer_one_path,
+  layer_two_path,
+  layer_three_path,
+  layer_four_path,
   layer_one_path_II,
   layer_two_path_II,
   layer_three_path_II,
@@ -19,6 +19,7 @@ import { useFlubber } from "./useFlubber";
 
 interface SectionDemarcationProps {
   type?: "mini",
+  customStyle?: string,
 }
 
 const layer_path_one = [layer_one_path, layer_one_path_II, layer_one_path];
@@ -28,7 +29,7 @@ const layer_path_four = [layer_four_path, layer_four_path_II, layer_four_path];
 const bottom_layer_path_one = [bottom_layer_one_path, bottom_layer_one_path_II, bottom_layer_one_path];
 const bottom_layer_path_two = [bottom_layer_two_path, bottom_layer_two_path_II, bottom_layer_two_path];
 
-export default function SectionDemarcation({ type } : SectionDemarcationProps) {
+export default function SectionDemarcation({ type, customStyle } : SectionDemarcationProps) {
   const [pathIndex, setPathIndex] = useState(0);
   const progress = useMotionValue(pathIndex);
   const flubber_layer_path_one = useFlubber(progress, layer_path_one);
@@ -57,48 +58,48 @@ export default function SectionDemarcation({ type } : SectionDemarcationProps) {
     return () => animation.stop();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathIndex]);
-  
+
   // console.log(pathIndex);
 
   return (
     type != "mini" ? (
-      <div className="absolute w-full -bottom-1">
+      <div className={`absolute w-full -bottom-1 ${customStyle}`}>
          <svg viewBox="0 0 900 200">
-          <motion.path 
-            d={flubber_layer_path_one} 
-            fill="#201d7b66" 
+          <motion.path
+            d={flubber_layer_path_one}
+            fill="#201d7b66"
           />
 
-          <motion.path 
-            d={flubber_layer_path_two} 
-            fill="#7b6db2" 
+          <motion.path
+            d={flubber_layer_path_two}
+            fill="#7b6db2"
           />
 
-          <motion.path 
-            d={flubber_layer_path_three} 
-            fill="#bdb4d8" 
+          <motion.path
+            d={flubber_layer_path_three}
+            fill="#bdb4d8"
           />
 
-          <motion.path 
-            d={flubber_layer_path_four} 
-            fill="#fdfdfd" 
+          <motion.path
+            d={flubber_layer_path_four}
+            fill="#fdfdfd"
           />
         </svg>
       </div>
     ) : (
       <div className="absolute -left-1 w-[110%]">
         <svg viewBox="0 0 900 200">
-          <motion.path 
+          <motion.path
             d={flubber_bottom_layer_path_one}
             fill="#c1b7e880"
           />
 
-          <motion.path 
+          <motion.path
             d={flubber_bottom_layer_path_two}
             fill="#d6ceefC2"
           />
         </svg>
       </div>
-    )      
+    )
   )
 }

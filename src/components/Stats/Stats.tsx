@@ -3,10 +3,10 @@ import StatsCard from "./StatsCard"
 export default function Stats() {
   return (
     <div className="flex flex-col lg:flex-row lg:w-[600px] bg-white *:basis-1/3 rounded-lg border-t shadow-md lg:shadow-md lg:border-t-0">
-      <StatsCard 
+      <StatsCard
         total="2"
         title="Years of Impact"
-        content="Our team has consistently delivered exceptional 
+        content="Our team has consistently delivered exceptional
                 performance, shaping Africa's development."
       />
 

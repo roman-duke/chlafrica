@@ -7,11 +7,17 @@ import Partners from "@components/Partners/Partners"
 import Expressions from "@components/Expressions/Expressions"
 import MiniContact from "@components/MiniContact/MiniContact"
 import Stages from "@components/Stages/Stages"
+import { useScroll } from "framer-motion"
+import { useRef } from "react"
 // import { motion, useIsPresent } from "framer-motion"
 
 export default function Home() {
-  // const isPresent = useIsPresent();
-  
+  const collageRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: collageRef,
+    // offset: ["start start", "end end"]
+  });
+
   return (
     <>
       <section className="text-sm bg-brand-accent w-full m-0">
@@ -28,9 +34,9 @@ export default function Home() {
         <Services />
       </section>
 
-      <section className="max-w-[1140px] m-auto bg-custom-light-gray lg:px-16 lg:pb-8">
+      <section ref={collageRef} className="max-w-[1140px] m-auto bg-custom-light-gray lg:px-16 lg:pb-8">
         <div className="flex flex-col gap-6 lg:flex-row items-center justify-between">
-          <Collage />
+          <Collage yProgress={scrollYProgress} />
           <Stats />
         </div>
       </section>
@@ -38,7 +44,7 @@ export default function Home() {
       <section className="pt-12 pb-8 px-8">
         <Stages />
       </section>
-      
+
       <section className="overflow-hidden">
         <Partners />
       </section>

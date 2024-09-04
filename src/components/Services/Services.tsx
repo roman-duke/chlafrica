@@ -23,7 +23,7 @@ import { motion } from "framer-motion";
 //     y: 40,
 //     opacity: 0,
 //   },
-  
+
 //   final: {
 //     y: 0,
 //     opacity: 0,
@@ -40,9 +40,6 @@ export default function Services() {
       <div className="flex flex-col items-center">
         <h2 className="lg:text-center text-center text-2xl lg:text-4xl font-bold text-brand-accent">
           Your One-Stop Haven for <br className="lg:hidden"/>
-          {/* <span className="inline-block w-full text-center">&nbsp;for Everything</span>  */}
-          {/* <span className="hidden lg:inline-block">&nbsp;for Everything Business Growth</span>  */}
-          {/* <span className="lg:hidden">&nbsp;via</span> */}
           <motion.span
             className="flex justify-center items-center text-brand-earth_yellow h-[50px] relative w-full overflow-hidden"
           >
@@ -52,29 +49,29 @@ export default function Services() {
 
       </div>
 
-      <div className="flex lg:flex-row flex-col items-center mt-12 gap-4 lg:*:border-r">
-        <ServiceCard 
+      <div className="flex lg:flex-row flex-col items-center mt-6 gap-4 lg:*:border-r">
+        <ServiceCard
           title="Business Incubation"
-          content="We specialise in co-designing and launching 
-                  social businesses and initiatives, providing 
+          content="We specialise in co-designing and launching
+                  social businesses and initiatives, providing
                   comprehensive support from concept to execution"
           imgSource={ChlafricaIncubation}
         />
 
         <ServiceCard
           title="Business Sustainability"
-          content="We offer end-to-end business management services, 
-                  covering corporate communications, human resources, 
-                  finance, legal advisory, and more. Our network includes 
-                  excellent consultants and partner organisations to ensure 
+          content="We offer end-to-end business management services,
+                  covering corporate communications, human resources,
+                  finance, legal advisory, and more. Our network includes
+                  excellent consultants and partner organisations to ensure
                   seamless operations."
           imgSource={ChlafricaSustainability}
         />
 
         <ServiceCard
           title="Consulting Partnership"
-          content="Our expertise extends to brand consulting and impact consulting, 
-                  including Corporate Social Responsibility (CSR), Corporate Social 
+          content="Our expertise extends to brand consulting and impact consulting,
+                  including Corporate Social Responsibility (CSR), Corporate Social
                   Advocacy (CSA), and Corporate Social Justice (CSJ) initiatives"
           imgSource={ChlafricaShakingHands}
         />
@@ -82,7 +79,7 @@ export default function Services() {
         <ServiceCard
           title="Community Support"
           content="Our Afrochamps community serves as a think-tank and problem-solving
-                  hive for knowledge sharing, capacity building, resource distribution 
+                  hive for knowledge sharing, capacity building, resource distribution
                   to promote people-driven development in Africa."
           imgSource={CommunitySupport}
         />

@@ -2,6 +2,7 @@ import Team from "@components/Team/Team";
 import AboutIntro from "@components/Intro/AboutIntro";
 import MiniContact from "@components/MiniContact/MiniContact";
 import Commitment from "@components/Commitment/Commitment";
+// import SectionDemarcation from "@components/SectionDemarcation/SectionDemarcation";
 // import { motion, useIsPresent } from "framer-motion";
 // import AboutIntroDemarcationIcon from "@assets/icons/about-demarcator.svg?react"
 
@@ -13,7 +14,12 @@ export default function About() {
       <section className="relative overflow-hidden">
         {/* <AboutIntroDemarcationIcon className="absolute rotate-180"/> */}
         <AboutIntro />
+
+        {/* <div className="relative h-[100px] md:h-[150px] lg:h-[250px]">
+          <SectionDemarcation type="mini" />
+        </div> */}
       </section>
+
 
       <section className="m-auto py-8 max-w-[1140px]">
         <Commitment />

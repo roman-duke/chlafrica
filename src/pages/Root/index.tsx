@@ -11,7 +11,7 @@ export default function Root() {
 
   useEffect(() => {
     setShowLoader(true);
-    setTimeout(() => setShowLoader(false), 4000)
+    setTimeout(() => setShowLoader(false), 1500)
   }, [location.pathname])
 
   return (
@@ -27,8 +27,8 @@ export default function Root() {
           <main>
             <Outlet />
           </main>
-          <Footer /> 
-        </motion.div>  
+          <Footer />
+        </motion.div>
       </AnimatePresence>
     )
   )
