@@ -59,7 +59,7 @@ export default function Services() {
         />
 
         <ServiceCard
-          title="Business Sustainability"
+          title="Operations Management"
           content="We offer end-to-end business management services,
                   covering corporate communications, human resources,
                   finance, legal advisory, and more. Our network includes
@@ -69,7 +69,7 @@ export default function Services() {
         />
 
         <ServiceCard
-          title="Consulting Partnership"
+          title="Brand and Impact Consulting"
           content="Our expertise extends to brand consulting and impact consulting,
                   including Corporate Social Responsibility (CSR), Corporate Social
                   Advocacy (CSA), and Corporate Social Justice (CSJ) initiatives"
@@ -77,7 +77,7 @@ export default function Services() {
         />
 
         <ServiceCard
-          title="Community Support"
+          title="Capacity Building"
           content="Our Afrochamps community serves as a think-tank and problem-solving
                   hive for knowledge sharing, capacity building, resource distribution
                   to promote people-driven development in Africa."
