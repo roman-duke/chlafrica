@@ -85,7 +85,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-3 lg:mt-5 max-w-[400px] text-brand text-justify lg:text-left">
-            We are a social enterprise operating withing the principles of Africapitalism, empowering SME's
+            We are a social enterprise operating within the principles of Africapitalism, empowering SME's
             and initiatives that drive<br className="hidden lg:inline-block" /> positive change across Africa, all while ensuring
             financial sustainability.
           </p>

@@ -13,7 +13,7 @@ export default function Stats() {
       <StatsCard
         total="10+"
         title="Clients Served"
-        content="We have collaborated with over than 10 SMEs and initiatives
+        content="We have collaborated with over 10 SMEs and initiatives
                  providing tailored services to meet their unique business needs."
         border
       />
