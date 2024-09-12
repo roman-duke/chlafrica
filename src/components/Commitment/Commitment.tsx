@@ -97,7 +97,7 @@ function CommitmentCard({
 
       <hr className="w-[110%] h-[3px] bg-black md:w-[3px] md:h-[120%]" />
 
-      <div className="flex flex-col justify-between md:justify-center italic h-[360px] w-full md:h-full p-4 md:p-6 border-2 md:border-4 overflow-hidden bg-custom-white md:not-italic">
+      <div className="flex flex-col justify-center italic h-[360px] w-full md:h-full p-4 md:p-6 border-2 md:border-4 overflow-hidden bg-custom-white md:not-italic">
         <span className="text-3xl md:text-5xl italic text-brand-earth_yellow">
           ❝
         </span>
