@@ -6,7 +6,7 @@
 	--b: #262626;
 	--w: #dcdcd2;
 	--s: 2s; /* change speed */
-}	
+}
 
 /** Custom style for wavy lines **/
 .tribe-pattern {
@@ -60,7 +60,7 @@
 	height: 3vmin;
 	margin: 2vmin 0vmin;
 	background: linear-gradient(90deg, #fff0 33%, var(--w) 33% 67%, #fff0 67% 100%);
-	animation: grow var(--s) ease-in-out 0s infinite alternate; 
+	animation: grow var(--s) ease-in-out 0s infinite alternate;
 	background-size: 300%;
 	background-position-x: -203%;
 }
@@ -126,4 +126,8 @@
 	position: fixed;
 	top: 20px;
 	z-index: 100 !important;
+}
+
+@layer base {
+  @import url('/src/assets/fonts/Lora/Lora.css');
 }

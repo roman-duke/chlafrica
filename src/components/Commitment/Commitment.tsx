@@ -1,132 +1,142 @@
-import SDGPoverty from "@assets/images/sdg-no-poverty.jpg";
-import SDGEducation from "@assets/images/sdg-education.jpg";
-import SDGGrowth from "@assets/images/sdg-growth.jpg";
-import PeopleDevelopment from "@assets/images/people-development.jpg"
-import SDGImg from "@assets/images/chlafrica-commitment.jpg";
-import SDGImg2 from "@assets/images/chlafrica-commitment-2.jpg";
-import { useState } from "react";
-import { Variants, motion } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  MotionValue,
+  useTransform,
+} from "framer-motion";
+import SocialCommitmentIntro from "@assets/images/social_commitment_chlafrica.jpg";
+import { useEffect, useState } from "react";
 
-export default function Commitment() {
-  const [sdgText, setSDGText] = useState("SDG's");
+interface CommitmentProps {
+  yProgress: MotionValue<number>;
+  data: {
+    src: string;
+    bgVersion: number;
+    title: string;
+    text: string;
+  }[];
+}
 
-  function handleSDGChange(arg: number) {
-    if (arg == 0) setSDGText("SDG-1");
-    else if (arg == 1) setSDGText("SDG-4");
-    else if (arg == 2) setSDGText("SDG-8");
-    else if (arg == 3) setSDGText("PDD");
-  }
+export default function Commitment({ yProgress, data }: CommitmentProps) {
+  const rotateValue = useTransform(yProgress, [0, 1], ["0deg", "360deg"]);
+  const [idx, setIdx] = useState(0);
 
-  const SDGVariants: Variants = {
-    initial: i => ({
-      // backgroundColor: "#fff",
-      rotate: 45 * (i == 0 ? -1 : (i !== 2 ? 1 : 0)),
-      x: 0,
-      y: '50%',
-      opacity: (i == 2 ? 0 : undefined),
-      transition: {
-        type: 'spring',
-        damping: 300,
-        duration: 2,
-      }
-    }),
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIdx((idx) => (idx + 1) % 4);
+    }, 9000);
 
-    inView: i => ({
-      rotate: 0,
-      y: 0,
-      x: '-50%',
-      opacity: 1,
-      transition: {
-        type: 'spring',
-        delay: (i == 2 ? 0.5 : 0),
-      }
-    })
-  }
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="flex flex-col">
-      <div className="px-10">
-        <h1 className="text-center text-3xl text-brand-accent font-semibold pb-2">
+    <div className="flex flex-col px-10 max-w-[1140px] m-auto">
+      <div className="size-60 self-center md:size-96">
+        <motion.img
+          src={SocialCommitmentIntro}
+          alt="Social Commitment intro picture"
+          className="object-cover object-center rounded-full"
+          style={{ rotate: rotateValue }}
+        />
+      </div>
+
+      <div className="py-3 md:py-10">
+        <h1 className="text-center text-3xl text-brand-accent font-semibold pb-2 md:text-4xl">
           Our Social Commitments
         </h1>
 
-        <p className="text-slate-400 text-center">
-          Chlafrica is dedicated to fostering sustainable development and enhancing the quality of life for communities. 
-          Our social commitments are aligned with key global and regional initiatives, ensuring our efforts contribute meaningfully 
-          to societal progress.
+        <p className="text-justify pt-2 text-brand-accent md:text-lg">
+          CHL Africa is dedicated to fostering sustainable development and
+          enhancing the quality of life for communities. Our social commitments
+          are aligned with key global and regional initiatives, ensuring our
+          efforts contribute meaningfully to societal progress.
         </p>
       </div>
 
-      <div className="py-4 grid lg:grid-cols-2 items-center">
+      <div className="my-5 md:my-10">
+        <CommitmentCard
+          dataIdx={idx}
+          imgSrc={data[idx].src}
+          bgVersion={data[idx].bgVersion}
+          title={data[idx].title}
+          text={data[idx].text}
+        />
+      </div>
+    </div>
+  );
+}
 
-        <div className="my-9 relative left-1/2 -translate-x-1/2 size-80 border rounded-full bg-gray-100">
-          <div className="absolute flex items-center text-center top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 size-24 rounded-full border shadow-md">
-            <span className="font-semibold inline-block w-full text-lg text-brand-accent uppercase">{sdgText}</span>
-          </div>
+function CommitmentCard({
+  text,
+  title,
+  imgSrc,
+  dataIdx,
+  bgVersion,
+}: CommitmentCardProps) {
+  return (
+    <div className="shadow-md md:shadow-none grid grid-cols-1 md:grid-cols-[50%_3px_50%] place-items-center">
+      <AnimatePresence mode="wait">
+        <motion.div
+          className={`${
+            (bgVersion == 2 && "bg-pattern-2") ||
+            (bgVersion == 3 && "bg-pattern-3") ||
+            (bgVersion == 4 && "bg-pattern-4") ||
+            (bgVersion == 5 && "bg-pattern-5")
+          } p-4 bg-cover h-[300px] w-[90%] md:h-[500px] md:w-[100%] border-2 border-b-0 md:border-b-2 md:border-r-0 border-brand-earth_yellow md:basis-1/2`}
+          key={dataIdx}
+        >
+          <motion.img
+            src={imgSrc as string}
+            className="relative h-full w-full object-cover border border-black bg-white"
+            initial={{ opacity: 0.35 }}
+            animate={{ opacity: 1, transition: { duration: 0.5 } }}
+            exit={{ opacity: 0.35 }}
+          />
+        </motion.div>
+      </AnimatePresence>
 
-          <motion.div 
-            className="absolute top-0 left-1/2 -translate-x-1/2 size-28 border rounded-full"
-            variants={SDGVariants}
-            custom={0}
-            initial="initial"
-            whileInView="inView"
-          >
-            <img 
-              className="hover:grayscale-0 grayscale w-full h-full rounded-full" src={SDGPoverty} loading="lazy"
-              onMouseEnter={() => handleSDGChange(0)}
-              onMouseLeave={() => setSDGText("SDG's")}
-            />
-          </motion.div>
+      <hr className="w-[110%] h-[3px] bg-black md:w-[3px] md:h-[120%]" />
 
-          <motion.div 
-            className="absolute top-1/2 -translate-y-1/2 size-28 border rounded-full"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, transition: { duration: 2 } }}
-          >
-            <img 
-              className="hover:grayscale-0 grayscale w-full h-full rounded-full" src={SDGEducation} loading="lazy"
-              onMouseEnter={() => handleSDGChange(1)}
-              onMouseLeave={() => setSDGText("SDG's")}
-            />
-          </motion.div>
+      <div className="flex flex-col justify-between md:justify-center italic h-[360px] w-full md:h-full p-4 md:p-6 border-2 md:border-4 overflow-hidden bg-custom-white md:not-italic">
+        <span className="text-3xl md:text-5xl italic text-brand-earth_yellow">
+          ❝
+        </span>
 
-          <motion.div 
-            className="absolute top-1/2 -translate-y-1/2 right-0 size-28 border rounded-full"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, transition: { duration: 2 } }}
-          >
-            <img 
-              className="hover:grayscale-0 grayscale w-full h-full rounded-full" src={SDGGrowth} loading="lazy" 
-              onMouseEnter={() => handleSDGChange(2)}
-              onMouseLeave={() => setSDGText("SDG's")}
-            />
-          </motion.div>
+        <div>
+          <AnimatePresence mode="wait">
+            <motion.h2
+              className="text-brand-earth_yellow text-lg md:text-3xl font-bold"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              key={dataIdx}
+              >
+              {title}
+            </motion.h2>
+          </AnimatePresence>
 
-          <motion.div 
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 size-28 border rounded-full"
-            variants={SDGVariants}
-            custom={2}
-            initial="initial"
-            whileInView="inView"
-          >
-            <img 
-              className="hover:grayscale-0 grayscale w-full h-full rounded-full" src={PeopleDevelopment} loading="lazy"
-              onMouseEnter={() => handleSDGChange(3)}
-              onMouseLeave={() => setSDGText("SDG's")}
-            />
-          </motion.div>
-        </div>
-
-        <div className="relative hidden rounded-lg lg:block">
-          <div className="h-[450px] w-[350px] overflow-hidden">
-            <img className="hover:scale-105 relative z-10 w-full h-full object-cover object-center rounded-lg" src={SDGImg} alt="SDG image" />
-          </div>
-
-          <div className="absolute top-[2rem] left-[2rem] h-[450px] w-[350px]">
-            <img className="w-full h-full object-cover rounded-lg" src={SDGImg2} alt="SDG image" />
-          </div>
+          <AnimatePresence mode="wait">
+            <motion.p
+              className="font-lora leading-snug text-brand-accent text-justify md:text-xl md:my-2 md:leading-relaxed"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              // initial={{ x: '-100%' }}
+              // animate={{ x: 0, transition: { duration: 0.75 } }}
+              // exit={{ x: '150%' }}
+              key={dataIdx}
+            >
+              {text}
+            </motion.p>
+          </AnimatePresence>
         </div>
       </div>
     </div>
-  )
+  );
+}
+
+interface CommitmentCardProps {
+  [key: string]: string | number;
+  bgVersion: number;
+  dataIdx: number;
 }
