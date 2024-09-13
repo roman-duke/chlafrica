@@ -11,7 +11,7 @@ export default function Root() {
 
   useEffect(() => {
     setShowLoader(true);
-    setTimeout(() => setShowLoader(false), 1500)
+    setTimeout(() => setShowLoader(false), 1000)
   }, [location.pathname])
 
   return (

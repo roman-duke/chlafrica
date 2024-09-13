@@ -7,13 +7,13 @@ export default function Intro() {
   return (
     <>
       <div className="pt-5 lg:pt-16 pb-16 px-5 flex flex-col items-center bg-brand-accent_two border-b shadow-xl">
-        <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-16 max-w-[1240px] m-auto mb-6">
+        <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-16 max-w-[1240px] m-auto mb-6 bg-pattern-2 p-4">
           <div className="bg-about-img bg-cover bg-center lg:h-[500px]">
-            <div className="p-5 md:p-16 backdrop-blur-sm">
+            <div className="p-5 md:p-16 backdrop-blur-sm h-full">
               <h2 className="my-5 lg:mt-32 relative text-4xl font-semibold text-white text-right">
                 OUR STORY
               </h2>
-              <div className="absolute translate-y-3 md:h-96 md:bottom-0 md:translate-y-1/4 h-52 w-1 bg-brand-earth_yellow left-[19%] md:left-[23%]">
+              <div className="absolute translate-y-10 md:h-96 md:bottom-0 md:translate-y-[15%] h-52 w-1 bg-brand-earth_yellow left-[19%] md:left-[23%]">
                 <div className="absolute bottom-0 left-0 w-3 h-24 bg-brand-earth_yellow" />
               </div>
               <p className="ml-auto w-[75%] leading-tight text-[14px] text-justify lg:text-2xl font-medium text-white">
