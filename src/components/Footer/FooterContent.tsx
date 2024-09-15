@@ -17,7 +17,7 @@ export default function FooterContent() {
           <img className="w-40 h-24 object-contain" src={ChlafricaLogoText} />
           <p className="mb-4 text-sm text-slate-500 text-center lg:text-left">
             We are promoting people-driven <br className="lg:hidden" />
-            development in Africa by supporting <br className="lg:hidden"/> 
+            development in Africa by supporting <br className="lg:hidden"/>
             businesses and initiatives that create <br className="lg:hidden"/>
             jobs, improve living standards and bring <br className="lg:hidden"/>
             long-term prosperity to Africa.
@@ -75,7 +75,7 @@ export default function FooterContent() {
           <ul className="w-full">
             <li className="flex justify-center lg:justify-start text-sm lg:text-base text-slate-500 items-center">
               <a
-                href="https://maps.app.goo.gl/Kv5pz2FxvQf4WtaE6" 
+                href="https://maps.app.goo.gl/Kv5pz2FxvQf4WtaE6"
                 className="flex gap-2 cursor-pointer"
               >
                 <LocationPinIcon className="w-6 h-6 stroke-brand" />
@@ -84,7 +84,7 @@ export default function FooterContent() {
             </li>
             <li className="flex justify-center lg:justify-start text-sm lg:text-base text-slate-500 items-center">
               <a
-                href="tel:+2349087109454" 
+                href="tel:+2349087109454"
                 className="flex gap-2 cursor-pointer"
               >
                 <PhoneIcon className="w-6 h-6 fill-brand " />
@@ -122,8 +122,8 @@ export default function FooterContent() {
             <a href="https://www.youtube.com/@chlafrica" target="_blank">
               <YouTubeIcon className="size-6" />
             </a>
-            
-            <a className="hidden lg:inline-block" href="https://www.linkedin.com/in/oritsetsemaye-solo-edema-0707b8243/" target="_blank">
+
+            <a className="hidden lg:inline-block" href="https://www.linkedin.com/company/chara-s-haven-limited/" target="_blank">
               <LinkedInIcon className="fill-black size-6" />
             </a>
 
