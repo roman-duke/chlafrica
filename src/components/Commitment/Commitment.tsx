@@ -74,7 +74,7 @@ function CommitmentCard({
   bgVersion,
 }: CommitmentCardProps) {
   return (
-    <div className="shadow-md md:shadow-none grid grid-cols-1 md:grid-cols-[50%_3px_50%] place-items-center">
+    <div className="shadow-md md:shadow-none grid grid-cols-1 md:grid-cols-[50%_3px_50%] place-items-center font-onter">
       <AnimatePresence mode="wait">
         <motion.div
           className={`${

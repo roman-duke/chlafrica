@@ -2,15 +2,20 @@ import FancyButton from "@components/Button/FancyButton";
 import { Link } from "react-router-dom";
 
 interface ExpressionCardProps {
-  [prop: string]: string,
+  category: string,
+  title: string,
+  content: string,
+  imgSource: string,
+  destination?: string,
 }
 
 export default function ExpressionCard(
-  { 
-  category, 
-  title, 
-  content, 
-  imgSource 
+  {
+  category,
+  title,
+  content,
+  imgSource,
+  destination,
 } : ExpressionCardProps) {
   return (
     <div className="relative group hover:-top-1 transition duration-500 p-4 cursor-pointer">
@@ -25,8 +30,8 @@ export default function ExpressionCard(
           <p className="text-sm font-light opacity-65">{content}</p>
 
           <div className="mt-3">
-            <Link to='/expressions'>
-              <FancyButton 
+            <Link to={destination ?? '/expressions'}>
+              <FancyButton
                 title="Read more"
                 bgColor="bg-brand-accent_two"
               />

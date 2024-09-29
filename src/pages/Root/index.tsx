@@ -11,11 +11,13 @@ export default function Root() {
 
   useEffect(() => {
     setShowLoader(true);
-    setTimeout(() => setShowLoader(false), 1000)
-  }, [location.pathname])
+    setTimeout(() => setShowLoader(false), 1000);
+  }, [location.pathname]);
 
-  return (
-    showLoader ? <Loader /> : (
+  return showLoader ? (
+    <Loader />
+  ) : (
+    <>
       <AnimatePresence mode="wait">
         <motion.div
           key={location.pathname}
@@ -24,12 +26,13 @@ export default function Root() {
           exit={{ opacity: 0 }}
         >
           <Navbar />
-          <main>
-            <Outlet />
-          </main>
-          <Footer />
         </motion.div>
       </AnimatePresence>
-    )
-  )
+
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+    </>
+  );
 }

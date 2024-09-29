@@ -1,31 +1,37 @@
 import Vision from "@assets/icons/vision.svg";
 import Mission from "@assets/icons/mission.svg";
+// import IntroPattern from "@assets/images/tribal_pattern_II.jpeg";
 
 import { motion } from "framer-motion";
 
 export default function Intro() {
   return (
     <>
-      <div className="pt-5 lg:pt-16 pb-16 px-5 flex flex-col items-center bg-brand-accent_two border-b shadow-xl">
-        <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-16 max-w-[1240px] m-auto mb-6 bg-pattern-2 p-4">
-          <div className="bg-about-img bg-cover bg-center lg:h-[500px]">
+      <div className="pt-5 lg:pt-16 pb-16 px-5 lg:px-20 flex flex-col items-center bg-brand-accent_two border-b shadow-xl">
+        <div className="relative flex flex-col items-center max-w-[1240px] m-auto mb-6">
+          <div className="relative bg-about-img bg-cover bg-center lg:h-[500px] z-10">
             <div className="p-5 md:p-16 backdrop-blur-sm h-full">
               <h2 className="my-5 lg:mt-32 relative text-4xl font-semibold text-white text-right">
                 OUR STORY
               </h2>
-              <div className="absolute translate-y-10 md:h-96 md:bottom-0 md:translate-y-[15%] h-52 w-1 bg-brand-earth_yellow left-[19%] md:left-[23%]">
-                <div className="absolute bottom-0 left-0 w-3 h-24 bg-brand-earth_yellow" />
+
+              <div className="ml-auto md:w-[75%] bg-stone-400">
+                {/* <p className="backdrop-brightness-50 leading-tight text-[14px] text-justify lg:text-2xl font-medium text-white p-3"> */}
+                {/* <p className="backdrop-brightness-50 leading-tight text-[14px] text-justify lg:text-2xl font-medium text-white p-3"> */}
+                <p className="backdrop-brightness-0 leading-tight text-[14px] text-justify lg:text-2xl font-medium text-white p-3">
+                  Since 2022, our heartbeat has been to ignite people-driven
+                  development across Africa, fostering a positive perception and
+                  inspiring youth patriotism. By empowering SMEs to achieve
+                  business success and giving back to the community, we are paving
+                  the way for "the Africa we want," as envisioned by the African
+                  Union!
+                </p>
               </div>
-              <p className="ml-auto w-[75%] leading-tight text-[14px] text-justify lg:text-2xl font-medium text-white">
-                Since 2022, our heartbeat has been to ignite people-driven
-                development across Africa, fostering a positive perception and
-                inspiring youth patriotism. By empowering SMEs to achieve
-                business success and giving back to the community, we are paving
-                the way for "the Africa we want," as envisioned by the African
-                Union!
-              </p>
             </div>
           </div>
+
+          {/* <div className="absolute left-0 bottom-0 lg:-translate-x-8 lg:translate-y-8 -translate-x-4 translate-y-4 bg-pattern-2 size-1/2 z-0" /> */}
+          <div className="absolute left-0 bottom-0 lg:-translate-x-8 lg:translate-y-8 -translate-x-4 translate-y-4 bg-pattern-2 w-3/4 md:w-1/2 h-full z-0" />
         </div>
 
         <div className="grid lg:grid-cols-2 max-w-[1040px] mt-4 lg:mt-20 gap-y-7 lg:gap-x-8">
