@@ -6,7 +6,7 @@ import EventsImg from "@assets/images/chlafrica-expression-events.jpg"
 export default function Article2() {
   return (
     <section className="py-5 grid grid-cols-3 lg:gap-x-20">
-      <div className="p-6 text-sm text-justify leading-relaxed lg:leading-loose font-inter col-span-2">
+      <div className="p-6 text-sm text-justify leading-relaxed lg:leading-loose font-inter col-span-3 md:col-span-2">
         <h1 className="text-brand-earth_yellow text-xl uppercase font-semibold">
           Afrochamps: Overcoming Obstacles and Creating Impact
         </h1>
@@ -44,7 +44,7 @@ export default function Article2() {
         </p>
       </div>
 
-      <div>
+      <div className="col-span-3 md:col-span-1">
         <ExpressionCard
           category="Articles"
           title="The African Union Agenda 2063: The future of Africa"
