@@ -26,13 +26,13 @@ export default function Root() {
           exit={{ opacity: 0 }}
         >
           <Navbar />
+
+          <main>
+            <Outlet />
+          </main>
+          <Footer />
         </motion.div>
       </AnimatePresence>
-
-      <main>
-        <Outlet />
-      </main>
-      <Footer />
     </>
   );
 }
