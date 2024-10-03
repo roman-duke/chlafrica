@@ -1,16 +1,21 @@
-import ExpressionImg1 from "@assets/images/expression_card_1.jpeg";
-import ExpressionImg3 from "@assets/images/chlafrica_space_center.webp";
-import ExpressionCard from "@components/ExpressionCard/ExpressionCard";
+// import ExpressionImg1 from "@assets/images/expression_card_1.jpeg";
+// import ExpressionImg3 from "@assets/images/chlafrica_space_center.webp";
+// import ExpressionCard from "@components/ExpressionCard/ExpressionCard";
 import EventsImg from "@assets/images/chlafrica-expression-events.jpg"
+import SectionDemarcation from "@components/SectionDemarcation/SectionDemarcation";
 
 export default function Article2() {
   return (
-    <section className="py-5 grid grid-cols-3 lg:gap-x-20">
-      <div className="p-6 text-sm text-justify leading-relaxed lg:leading-loose font-inter col-span-3 md:col-span-2">
-        <h1 className="text-brand-earth_yellow text-xl uppercase font-semibold">
+    <section className="grid grid-cols-3 lg:gap-x-20">
+      <div className="relative col-span-3 bg-brand-accent py-6 h-[125px] md:h-[150px] lg:h-[220px]">
+        <h1 className="text-center text-brand-earth_yellow text-xl lg:text-3xl uppercase font-semibold">
           Afrochamps: Overcoming Obstacles and Creating Impact
         </h1>
+        <SectionDemarcation type="semi-mini"/>
+        <div className="bg-white absolute -bottom-1 left-0 w-20 h-4"></div>
+      </div>
 
+      <div className="p-6 pt-0 text-sm text-justify leading-relaxed lg:leading-loose font-inter col-span-3 md:col-span-2">
         <div className="my-4">
           <img src={EventsImg} />
         </div>
@@ -42,10 +47,12 @@ export default function Article2() {
           <span className="font-bold">May 25th, 2023</span>, and join us in
           celebrating the power of the young African!
         </p>
+
+        
       </div>
 
       <div className="col-span-3 md:col-span-1">
-        <ExpressionCard
+        {/* <ExpressionCard
           category="Articles"
           title="The African Union Agenda 2063: The future of Africa"
           content="The Adoption of the African Union Agenda 2063 has
@@ -62,7 +69,7 @@ export default function Article2() {
                   a significant tool for promoting Africa’s growth and development.
                   Its economic and environmental sectors…"
           imgSource={ExpressionImg3}
-        />
+        /> */}
       </div>
     </section>
   );

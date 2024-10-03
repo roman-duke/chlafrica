@@ -15,10 +15,10 @@ export default function Intro() {
                 OUR STORY
               </h2>
 
-              <div className="ml-auto md:w-[75%] bg-stone-400">
+              <div className="ml-auto md:w-[75%] bg-black opacity-50">
                 {/* <p className="backdrop-brightness-50 leading-tight text-[14px] text-justify lg:text-2xl font-medium text-white p-3"> */}
                 {/* <p className="backdrop-brightness-50 leading-tight text-[14px] text-justify lg:text-2xl font-medium text-white p-3"> */}
-                <p className="backdrop-brightness-0 leading-tight text-[14px] text-justify lg:text-2xl font-medium text-white p-3">
+                <p className="leading-tight text-[14px] text-justify lg:text-2xl font-medium text-white p-3">
                   Since 2022, our heartbeat has been to ignite people-driven
                   development across Africa, fostering a positive perception and
                   inspiring youth patriotism. By empowering SMEs to achieve

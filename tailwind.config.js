@@ -34,7 +34,8 @@ export default {
         'pattern-5': "url('/src/assets/images/goldeye_pattern.jpeg')",
         'dotted-pattern': "url('/src/assets/images/dotted_pattern.jpeg')",
         'img': "url('/src/assets/icons/bg.svg')",
-        'about-img': "url('/src/assets/images/chlafrica_about_us.jpg')"
+        'about-img': "url('/src/assets/images/chlafrica_about_us.jpg')",
+        'expressions-intro-bg': "url('/src/assets/images/expressions-intro-bg.jpg')",
       },
       backgroundSize: {
         '18': '18px'

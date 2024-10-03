@@ -1,6 +1,7 @@
 import ExpressionImg1 from "@assets/images/expression_card_1.jpeg";
-import ExpressionImg2 from "@assets/images/expression_card_2.jpeg";
 import ExpressionImg3 from "@assets/images/chlafrica_space_center.webp";
+import ExpressionImg4 from "@assets/images/chlafrica-state-of-tech.jpg";
+import ExpressionImg5 from "@assets/images/chlafrica-economy.jpg";
 import Flagship1 from "@assets/images/chlafrica-flagship-1.jpg";
 import Flagship2 from "@assets/images/chlafrica-flagship-2.jpg";
 import Flagship3 from "@assets/images/chlafrica-flagship-4.jpg";
@@ -16,14 +17,20 @@ import Flagship12 from "@assets/images/chlafrica-flagship-12.jpg";
 import Flagship13 from "@assets/images/chlafrica-flagship-13.jpg";
 import Flagship14 from "@assets/images/chlafrica-flagship-14.jpg";
 import ExpressionCard from "@components/ExpressionCard/ExpressionCard";
+import SectionDemarcation from "@components/SectionDemarcation/SectionDemarcation";
 
 export default function Article1() {
   return (
-    <section className="py-5 grid grid-cols-3 lg:gap-x-20">
-      <div className="p-6 text-sm text-justify leading-relaxed lg:leading-loose font-inter col-span-3 md:col-span-2">
-        <h1 className="text-brand-earth_yellow text-xl uppercase font-semibold">
+    <section className="grid grid-cols-3 lg:gap-x-20">
+      <div className="relative col-span-3 bg-brand-accent py-10 h-[125px] md:h-[150px] lg:h-[275px]">
+        <h1 className="text-center text-brand-earth_yellow text-xl lg:text-3xl uppercase font-semibold">
           African Union Agenda 2063
         </h1>
+        <SectionDemarcation type="semi-mini"/>
+        <div className="bg-white absolute -bottom-1 left-0 w-20 h-4"></div>
+      </div>
+
+      <div className="p-6 pt-0 text-sm lg:text-base text-justify leading-relaxed lg:leading-loose font-inter col-span-3 md:col-span-2">
         <p>
           The adoption of the African Union Agenda 2063 has been a tremendous
           step towards transforming Africa into a prosperous, integrated and
@@ -342,7 +349,7 @@ export default function Article1() {
       </div>
 
       <div className="col-span-3 md:col-span-1">
-        <ExpressionCard
+        {/* <ExpressionCard
           category="Events"
           title="Afrochampions: Overcoming Obstacles and Creating Impact"
           content="Are you a young African eager to connect with peers and
@@ -350,7 +357,7 @@ export default function Article1() {
                   professional seeking to support…"
           imgSource={ExpressionImg2}
           destination="/events/overcoming_obstacles_and_creating_impact"
-        />
+        /> */}
 
         <ExpressionCard
           category="Articles"
@@ -359,6 +366,28 @@ export default function Article1() {
                   a significant tool for promoting Africa’s growth and development.
                   Its economic and environmental sectors…"
           imgSource={ExpressionImg3}
+          destination="/articles/rise_of_africa_space_industry"
+        />
+
+        <ExpressionCard
+          category="Articles"
+          title="The State of Technology in Africa"
+          content="In the past few years, it is clear that the African continent has been
+          experiencing a revolution around technology. With a large population
+          of Africans, the potential of becoming a major ace in the global
+          technology industry is visible. In the year 2022…"
+          imgSource={ExpressionImg4}
+          destination="/articles/state_of_tech_in_africa"
+        />
+
+        <ExpressionCard
+          category="Articles"
+          title="Nigeria's Economy, Trends and ways it can be Improved"
+          content="Nigeria, since its amalgamation in 1914, has undergone various phases,
+          from the republican government to the militarily ruled period, and here we are today
+          with a democratic system of government. Like Rome, Nigeria cannot be built in a day…"
+          imgSource={ExpressionImg5}
+          destination="/articles/nigeria_economy"
         />
       </div>
     </section>

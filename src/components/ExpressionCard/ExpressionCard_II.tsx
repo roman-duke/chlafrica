@@ -20,7 +20,7 @@ export default function ExpressionCard2({
       to={destination}
       className="relative group hover:-top-1 transition duration-500 p-4 z-10"
     >
-      <div className="h-full rounded-xl border shadow-md">
+      <div className="h-80 lg:h-96 rounded-xl border shadow-md">
         <div className="relative size-full overflow-hidden rounded-lg cursor-pointer">
           <img
             className="brightness-50 group-hover:scale-105 group-hover:brightness-75 duration-300 w-full h-full object-cover transition"
