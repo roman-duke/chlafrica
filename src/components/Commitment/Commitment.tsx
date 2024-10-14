@@ -22,8 +22,6 @@ export default function Commitment({ yProgress, data }: CommitmentProps) {
   const interval = useRef<NodeJS.Timeout>();
   const [idx, setIdx] = useState(0);
 
-  console.log(idx);
-
   useEffect(() => {
     function updateIdx() {
       setIdx((idx) => (idx + 1) % 4);
