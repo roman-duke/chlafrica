@@ -132,3 +132,8 @@
   @import url('/src/assets/fonts/Lora/Lora.css');
   @import url('/src/assets/fonts/SourceSans3/SourceSans3.css');
 }
+
+
+.pagination-box-shadow {
+  box-shadow: 2px 2px #DCA957;
+}

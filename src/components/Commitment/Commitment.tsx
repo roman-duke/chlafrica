@@ -5,7 +5,7 @@ import {
   useTransform,
 } from "framer-motion";
 import SocialCommitmentIntro from "@assets/images/social_commitment_chlafrica.jpg";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface CommitmentProps {
   yProgress: MotionValue<number>;
@@ -19,15 +19,33 @@ interface CommitmentProps {
 
 export default function Commitment({ yProgress, data }: CommitmentProps) {
   const rotateValue = useTransform(yProgress, [0, 1], ["0deg", "360deg"]);
+  const interval = useRef<NodeJS.Timeout>();
   const [idx, setIdx] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIdx((idx) => (idx + 1) % 4);
-    }, 9000);
+  console.log(idx);
 
-    return () => clearInterval(interval);
+  useEffect(() => {
+    function updateIdx() {
+      setIdx((idx) => (idx + 1) % 4);
+    }
+
+    interval.current = setInterval(updateIdx, 9000);
+
+    // Get the pagination element
+    const pagination = document.getElementById("pagination") as HTMLDivElement;
+    pagination.addEventListener("click", () => {
+      clearInterval(interval.current);
+
+      // Now restart the interval if no interaction in 10 seconds
+      interval.current = setInterval(updateIdx, 15000);
+    });
+
+    return () => clearInterval(interval.current);
   }, []);
+
+  function handleIdxChange(arg: number) {
+    setIdx(arg);
+  }
 
   return (
     <div className="flex flex-col px-10 max-w-[1140px] m-auto">
@@ -60,6 +78,25 @@ export default function Commitment({ yProgress, data }: CommitmentProps) {
           bgVersion={data[idx].bgVersion}
           title={data[idx].title}
           text={data[idx].text}
+        />
+      </div>
+
+      <div id="pagination" className="flex justify-center mt-8 gap-x-2">
+        <span
+          className={`inline-block size-3 bg-gray-700 opacity-85 cursor-pointer ${idx == 0 && 'pagination-box-shadow'}`}
+          onClick={() => handleIdxChange(0)}
+          />
+        <span
+          className={`inline-block size-3 bg-gray-700 opacity-85 cursor-pointer ${idx == 1 && 'pagination-box-shadow'}`}
+          onClick={() => handleIdxChange(1)}
+          />
+        <span
+          className={`inline-block size-3 bg-gray-700 opacity-85 cursor-pointer ${idx == 2 && 'pagination-box-shadow'}`}
+          onClick={() => handleIdxChange(2)}
+          />
+        <span
+          className={`inline-block size-3 bg-gray-700 opacity-85 cursor-pointer ${idx == 3 && 'pagination-box-shadow'}`}
+          onClick={() => handleIdxChange(3)}
         />
       </div>
     </div>
@@ -110,7 +147,7 @@ function CommitmentCard({
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               key={dataIdx}
-              >
+            >
               {title}
             </motion.h2>
           </AnimatePresence>
