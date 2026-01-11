@@ -4,6 +4,7 @@ import Article2 from "@pages/Expressions/Article2";
 import Article3 from "@pages/Expressions/Article3";
 import Article4 from "@pages/Expressions/Article4";
 import Article5 from "@pages/Expressions/Article5";
+import Article6 from "@pages/Expressions/Article6";
 import Expressions from "@pages/Expressions/Expressions";
 import Home from "@pages/Home/Home";
 import Root from "@pages/Root";
@@ -45,6 +46,10 @@ const AppRouter = createBrowserRouter([
           {
             path: 'nigeria_economy',
             element: <Article5 />
+          },
+          {
+            path: 'nigeria-tax-reforms',
+            element: <Article6 />
           },
         ]
       },

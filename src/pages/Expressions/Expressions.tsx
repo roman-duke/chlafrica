@@ -6,6 +6,7 @@ import ExpressionImg2 from "@assets/images/expression_card_2.jpeg";
 import ExpressionImg3 from "@assets/images/chlafrica_space_center.webp";
 import ExpressionImg4 from "@assets/images/chlafrica-state-of-tech.jpg";
 import ExpressionImg5 from "@assets/images/chlafrica-economy.jpg";
+import ExpressionImg6 from "@assets/images/pres-tinubu.jpg";
 import ExpressionCard2 from "@components/ExpressionCard/ExpressionCard_II";
 
 export default function Expressions() {
@@ -47,6 +48,13 @@ export default function Expressions() {
 
       <section className="mt-10 lg:mt-15">
         <div className="grid md:grid-cols-3 md:max-w-[1240px] m-auto">
+          <ExpressionCard2
+            category="Articles"
+            title="The 2026 Tax Reforms: Impact on Individuals, Small Businesses and Larger Companies"
+            imgSource={ExpressionImg6}
+            destination="/articles/nigeria-tax-reforms"
+          />
+
           <ExpressionCard2
             category="Articles"
             title="The African Union Agenda 2063: The future of Africa"

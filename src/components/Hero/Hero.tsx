@@ -23,7 +23,7 @@ export default function Hero() {
   ];
 
   return (
-    <div className="lg:pt-24 pt-4 2xl:pb-52">
+    <div className="lg:pt-20 pt-4 2xl:pb-52">
       <div className="relative flex flex-col lg:gap-8 lg:flex-row pt-16 lg:pt-24 items-center justify-around">
         <motion.div
           initial={{ x: 0, y: 0, rotate: '10deg' }}
@@ -73,6 +73,7 @@ export default function Hero() {
               exit={{opacity: 0 }}
               key={imgIdx}
               className="w-80 h-80 2xl:w-[450px] 2xl:h-[450px] rounded-lg object-cover" src={heroImages[imgIdx]}
+              loading="eager"
             />
           </AnimatePresence>
         </div>
@@ -84,13 +85,13 @@ export default function Hero() {
             Entreprises in Africa
           </h1>
 
-          <p className="mt-3 lg:mt-5 max-w-[400px] text-brand text-justify lg:text-left">
+          <p className="mt-3 lg:mt-5 max-w-[400px] text-brand text-justify lg:text-left lg:text-[16px]">
             We are a social enterprise operating within the principles of Africapitalism, empowering SME's
-            and initiatives that drive<br className="hidden lg:inline-block" /> positive change across Africa, all while ensuring
+            and initiatives that drive positive change across Africa, all while ensuring
             financial sustainability.
           </p>
 
-          <div className="mt-4 lg:mt-8">
+          <div className="mt-5 lg:mt-8">
             <Button
               title="JOIN THE AFROCHAMPS!"
               bgColor="bg-custom-light-gray"
